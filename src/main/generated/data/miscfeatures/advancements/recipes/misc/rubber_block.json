@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_latex_bottle": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "miscfeatures:latex_bottle"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miscfeatures:rubber_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_latex_bottle"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miscfeatures:rubber_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "miscfeatures:block/rubberwood_planks",
+    "side": "miscfeatures:block/rubberwood_planks",
+    "top": "miscfeatures:block/rubberwood_planks"
+  }
+}

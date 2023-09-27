@@ -1,0 +1,16 @@
+// 1.20.2	2023-09-26T16:23:36.1111932	Miscellaneous Features/Tags for minecraft:block
+0241f450c0baa074830c0f7225294a0794615f13 data\miscfeatures\tags\blocks\rubber_logs.json
+b41ad6dda6376a3f4873e42cdf74d02242d2986e data\minecraft\tags\blocks\mineable\pickaxe.json
+98f7094eee220525d821d55c29af47a938cbefdf data\minecraft\tags\blocks\fence_gates.json
+79b56fc4bfdb66e08b4f4e2dc1d0ded914815e2f data\minecraft\tags\blocks\wooden_stairs.json
+6b3c404e540522152e5b9bce6b0ac729166deb2d data\minecraft\tags\blocks\saplings.json
+a468b56171c4540f1bb2b8dc57a02e0f52d9d83b data\minecraft\tags\blocks\wooden_doors.json
+d1f49e32373a023dbd62fa015ef9765506897cf3 data\minecraft\tags\blocks\fences.json
+b3ec4ec13d8a14dcae37fd52e442d9d022f7751c data\minecraft\tags\blocks\leaves.json
+03ae62941c197ae04a2c4e289eb7041e24910ddd data\minecraft\tags\blocks\planks.json
+2d726ef0581cf7e62096af004a071bfe4b5231d1 data\minecraft\tags\blocks\mineable\shovel.json
+5c3e8ec0a0f77fc36c716864cbb02f2b90d2936e data\minecraft\tags\blocks\logs_that_burn.json
+5498292c0f9ee669147a4bb3572b54f3ffa3deaa data\minecraft\tags\blocks\wooden_pressure_plates.json
+f688a2c700683393a272c183ee5c03a8d86ddb08 data\minecraft\tags\blocks\wooden_trapdoors.json
+e8d3a02abff54c6d3dbedf05af9f57eb434e9175 data\minecraft\tags\blocks\wooden_buttons.json
+364e091084ef480f217ed9956fc7fe9a351276b0 data\minecraft\tags\blocks\wooden_slabs.json

@@ -1,0 +1,42 @@
+{
+	"block.spike_block.extend": {
+		"sounds": [
+			{
+				"name": "item/trident/pierce1",
+				"pitch": 0.5,
+				"volume": 1.0
+			},
+			{
+				"name": "item/trident/pierce2",
+				"pitch": 0.5,
+				"volume": 1.0
+			},
+			{
+				"name": "item/trident/pierce3",
+				"pitch": 0.5,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.spike_block.extend"
+	},
+	"block.spike_block.retract": {
+		"sounds": [
+			{
+				"name": "item/trident/pierce1",
+				"pitch": 2.0,
+				"volume": 1.0
+			},
+			{
+				"name": "item/trident/pierce2",
+				"pitch": 2.0,
+				"volume": 1.0
+			},
+			{
+				"name": "item/trident/pierce3",
+				"pitch": 2.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.spike_block.retract"
+	}
+}

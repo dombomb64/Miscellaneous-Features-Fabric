@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "miscfeatures:block/dripping_rubber_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "miscfeatures:block/dripping_rubber_wood"
+    },
+    "axis=z": {
+      "model": "miscfeatures:block/dripping_rubber_wood",
+      "x": 90
+    }
+  }
+}

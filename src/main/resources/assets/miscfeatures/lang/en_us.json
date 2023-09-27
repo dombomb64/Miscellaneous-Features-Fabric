@@ -1,0 +1,34 @@
+{
+	"itemgroup.miscfeatures": "Miscellaneous Features",
+	
+	"death.attack.spike_block": "%1$s didn't dodge the spike",
+
+	"subtitles.block.spike_block.extend": "Spike block extends",
+	"subtitles.block.spike_block.retract": "Spike block retracts",
+	
+	"item.miscfeatures.latex_bottle": "Latex Bottle",
+
+	"block.miscfeatures.rubber_log": "Rubber Log",
+	"block.miscfeatures.rubber_wood": "Rubber Wood",
+	"block.miscfeatures.stripped_rubber_log": "Stripped Rubber Log",
+	"block.miscfeatures.stripped_rubber_wood": "Stripped Rubber Wood",
+	"block.miscfeatures.dripping_rubber_log": "Dripping Rubber Log",
+	"block.miscfeatures.dripping_rubber_wood": "Dripping Rubber Wood",
+	
+	"block.miscfeatures.rubberwood_planks": "Rubberwood Planks",
+	"block.miscfeatures.rubberwood_stairs": "Rubberwood Stairs",
+	"block.miscfeatures.rubberwood_slab": "Rubberwood Slab",
+	"block.miscfeatures.rubberwood_fence": "Rubberwood Fence",
+	"block.miscfeatures.rubberwood_fence_gate": "Rubberwood Fence Gate",
+	"block.miscfeatures.rubberwood_door": "Rubberwood Door",
+	"block.miscfeatures.rubberwood_trapdoor": "Rubberwood Trapdoor",
+	"block.miscfeatures.rubberwood_pressure_plate": "Rubberwood Pressure Plate",
+	"block.miscfeatures.rubberwood_button": "Rubberwood Button",
+
+	"block.miscfeatures.rubber_leaves": "Rubber Leaves",
+	"block.miscfeatures.rubber_sapling": "Rubber Sapling",
+	
+	"block.miscfeatures.rubber_block": "Rubber Block",
+
+	"block.miscfeatures.spike_block": "Spike Block"
+}

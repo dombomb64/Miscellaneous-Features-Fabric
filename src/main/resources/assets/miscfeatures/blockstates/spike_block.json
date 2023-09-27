@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"extended=false,forced=false": {
+			"model": "miscfeatures:block/spike_block_retracted"
+		},
+		"extended=false,forced=true": {
+			"model": "miscfeatures:block/spike_block_retracted"
+		},
+		"extended=true,forced=false": {
+			"model": "miscfeatures:block/spike_block_extended"
+		},
+		"extended=true,forced=true": {
+			"model": "miscfeatures:block/spike_block_extended"
+		}
+	}
+}

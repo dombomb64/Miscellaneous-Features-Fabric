@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rubber_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "miscfeatures:rubber_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:rubber_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rubber_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:rubber_wood"
+    ]
+  },
+  "sends_telemetry_event": false
+}

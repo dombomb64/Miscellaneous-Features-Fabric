@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "miscfeatures:block/rubber_sapling"
+  }
+}

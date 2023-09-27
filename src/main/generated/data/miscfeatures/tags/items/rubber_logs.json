@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "miscfeatures:rubber_log",
+    "miscfeatures:rubber_wood",
+    "miscfeatures:stripped_rubber_log",
+    "miscfeatures:stripped_rubber_wood",
+    "miscfeatures:dripping_rubber_log",
+    "miscfeatures:dripping_rubber_wood"
+  ]
+}

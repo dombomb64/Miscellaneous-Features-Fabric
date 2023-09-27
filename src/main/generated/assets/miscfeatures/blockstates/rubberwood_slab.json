@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "miscfeatures:block/rubberwood_slab"
+    },
+    "type=double": {
+      "model": "miscfeatures:block/rubberwood_planks"
+    },
+    "type=top": {
+      "model": "miscfeatures:block/rubberwood_slab_top"
+    }
+  }
+}
