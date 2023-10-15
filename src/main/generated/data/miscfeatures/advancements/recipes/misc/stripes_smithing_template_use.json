@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_smithing_trim_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "miscfeatures:stripes_armor_trim"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miscfeatures:stripes_smithing_template_use"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_smithing_trim_template"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miscfeatures:stripes_smithing_template_use"
+    ]
+  },
+  "sends_telemetry_event": false
+}

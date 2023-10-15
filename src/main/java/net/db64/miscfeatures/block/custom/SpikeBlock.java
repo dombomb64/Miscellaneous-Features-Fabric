@@ -84,10 +84,20 @@ public class SpikeBlock extends Block {
 			}
 		}
 	}
-	
+
+	@Override
 	public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
+		updateSelf(state, world, pos);
+	}
+
+	@Override
+	public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify) {
+		updateSelf(state, world, pos);
+	}
+
+	private void updateSelf(BlockState state, World world, BlockPos pos) {
 		boolean powered = world.isReceivingRedstonePower(pos) || world.isReceivingRedstonePower(pos.up());
-		boolean wasForced = (Boolean)state.get(FORCED);
+		boolean wasForced = state.get(FORCED);
 		if (powered && !wasForced) {
 			force(world, pos, state);
 		} else if (!powered && wasForced) {

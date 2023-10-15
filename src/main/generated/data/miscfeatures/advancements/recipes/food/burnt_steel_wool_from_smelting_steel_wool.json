@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steel_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "miscfeatures:steel_wool"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:burnt_steel_wool_from_smelting_steel_wool"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steel_wool"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:burnt_steel_wool_from_smelting_steel_wool"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,87 @@
+/*package net.db64.miscfeatures.block.entity;
+
+import net.minecraft.block.BlockState;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.Inventories;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.PropertyDelegate;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.text.Text;
+import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.math.BlockPos;
+import org.jetbrains.annotations.Nullable;
+
+public class AdvancedNoteBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
+	private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(0, ItemStack.EMPTY);
+
+	protected final PropertyDelegate propertyDelegate;
+	private int note = 0;
+	private int maxNote = 11;
+	private int octave = 0;
+	private int maxOctave = 4;
+
+    public AdvancedNoteBlockEntity(BlockPos pos, BlockState state) {
+		super(ModBlockEntities.ADVANCED_NOTE_BLOCK, pos, state);
+	    this.propertyDelegate = new PropertyDelegate() {
+		    public int get(int index) {
+			    return switch (index) {
+				    case 0 -> AdvancedNoteBlockEntity.this.note;
+				    case 1 -> AdvancedNoteBlockEntity.this.maxNote;
+				    case 2 -> AdvancedNoteBlockEntity.this.octave;
+				    case 3 -> AdvancedNoteBlockEntity.this.maxOctave;
+				    default -> 0;
+			    };
+		    }
+
+		    public void set(int index, int value) {
+			    switch(index) {
+				    case 0: AdvancedNoteBlockEntity.this.note = value; break;
+				    case 1: AdvancedNoteBlockEntity.this.maxNote = value; break;
+				    case 2: AdvancedNoteBlockEntity.this.octave = value; break;
+				    case 3: AdvancedNoteBlockEntity.this.maxOctave = value; break;
+			    }
+		    }
+
+		    public int size() {
+			    return 4;
+		    }
+	    };
+	}
+
+	@Override
+	public DefaultedList<ItemStack> getItems() {
+		return this.inventory;
+	}
+
+    @Override
+    public Text getDisplayName() {
+		return Text.translatable("container.miscfeatures.advanced_note_block");
+	}
+
+    @Nullable
+    @Override
+    public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
+		return
+	}
+
+	@Override
+	protected void writeNbt(NbtCompound nbt) {
+		super.writeNbt(nbt);
+		Inventories.writeNbt(nbt, inventory);
+		nbt.putInt("advanced_redstone_block.note", note);
+		nbt.putInt("advanced_redstone_block.octave", octave);
+	}
+
+	@Override
+	public void readNbt(NbtCompound nbt) {
+		Inventories.readNbt(nbt, inventory);
+		super.readNbt(nbt);
+		note = nbt.getInt("advanced_redstone_block.note");
+		octave = nbt.getInt("advanced_redstone_block.octave");
+	}
+}*/

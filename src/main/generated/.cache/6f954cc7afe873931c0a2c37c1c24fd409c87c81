@@ -1,4 +1,5 @@
-// 1.20.2	2023-09-26T16:23:36.1071857	Miscellaneous Features/Block Loot Tables
+// 1.20.2	2023-10-15T16:56:41.5964529	Miscellaneous Features/Block Loot Tables
+276379b28b4c20f2b3ff7ca6f886a08c9a5e3130 data\miscfeatures\loot_tables\blocks\steel_wool.json
 a7d2e047fa5848b5b0ef117b947001184bcd7883 data\miscfeatures\loot_tables\blocks\rubberwood_slab.json
 6513e79f9a281e19a65ce039f63ab9444cf140f6 data\miscfeatures\loot_tables\blocks\rubberwood_fence_gate.json
 347373c11ffbe62c5a747e0f5fe9b9bcbf6c4724 data\miscfeatures\loot_tables\blocks\stripped_rubber_log.json
@@ -10,11 +11,14 @@ ac9aacf28b4da464bd2ba8073d37043a06bb267a data\miscfeatures\loot_tables\blocks\sp
 80657b172de2cfcea249fd73f213635a0208005c data\miscfeatures\loot_tables\blocks\rubber_wood.json
 853af8274a412989cf2bdfbe07f862001de49348 data\miscfeatures\loot_tables\blocks\rubberwood_door.json
 bd4f9c75e7aac24ccd9a455d2a965d78faf7d6fc data\miscfeatures\loot_tables\blocks\rubberwood_fence.json
+a759ad987b6c6d113d28d5e3a0ef836b0192f269 data\miscfeatures\loot_tables\blocks\advanced_note_block.json
 a6b0fc0243d07acb1ee0c94ebd025b0eef44e791 data\miscfeatures\loot_tables\blocks\rubber_block.json
 5e35d40e8efbbf693e197a299bb509d15017a32b data\miscfeatures\loot_tables\blocks\rubberwood_pressure_plate.json
 06a0a1405e1b1a2499242e243afd09ab1ca13bce data\miscfeatures\loot_tables\blocks\rubber_leaves.json
+09f2891b916aba052726f21b8306916666920edf data\miscfeatures\loot_tables\blocks\quartz_shredder.json
 b32ceff56db850d5101eeda8180f4c0801957ab6 data\miscfeatures\loot_tables\blocks\rubberwood_button.json
 c9a68e70b9c714fb1cc7165efb35cfade5da1983 data\miscfeatures\loot_tables\blocks\dripping_rubber_log.json
 7f165fc3f17cf29681fd6c9954ebfe8b5cced5d7 data\miscfeatures\loot_tables\blocks\rubberwood_planks.json
 dba48e8e096880c6bf22221fa9a9acebdcb92772 data\miscfeatures\loot_tables\blocks\rubber_log.json
+e42a9ae96932f3a84b4d6ac3b88ca427ed7f42d4 data\miscfeatures\loot_tables\blocks\burnt_steel_wool.json
 92c94e0f06b6e7a772f28fc911c22e968fcf766c data\miscfeatures\loot_tables\blocks\dripping_rubber_wood.json

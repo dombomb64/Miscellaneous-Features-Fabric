@@ -39,6 +39,14 @@ public class ModItemGroups {
 			entries.add(ModBlocks.RUBBER_BLOCK);
 
 			entries.add(ModBlocks.SPIKE_BLOCK);
+			entries.add(ModBlocks.ADVANCED_NOTE_BLOCK);
+
+			entries.add(ModItems.STRIPES_ARMOR_TRIM);
+
+			entries.add(ModBlocks.QUARTZ_SHREDDER);
+
+			entries.add(ModBlocks.STEEL_WOOL);
+			entries.add(ModBlocks.BURNT_STEEL_WOOL);
 		}).build());
 
 	public static void registerItemGroups() {

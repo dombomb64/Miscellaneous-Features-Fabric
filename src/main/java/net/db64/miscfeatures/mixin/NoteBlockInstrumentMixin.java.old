@@ -1,0 +1,10 @@
+package net.db64.miscfeatures.mixin;
+
+import net.minecraft.block.enums.Instrument;
+import net.minecraft.sound.SoundEvents;
+import org.spongepowered.asm.mixin.Mixin;
+
+@Mixin(Instrument.class)
+public enum NoteBlockInstrumentMixin {
+	ELECTRIC_GUITAR("guitar", SoundEvents.BLOCK_NOTE_BLOCK_GUITAR, Instrument.Type.BASE_BLOCK)
+}

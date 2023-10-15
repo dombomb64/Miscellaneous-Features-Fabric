@@ -5,8 +5,15 @@
 
 	"subtitles.block.spike_block.extend": "Spike block extends",
 	"subtitles.block.spike_block.retract": "Spike block retracts",
+	"subtitles.item.flintandsteel.char_block": "Flint and Steel chars block",
+	"subtitles.item.firecharge.char_block": "Fire Charge chars block",
+
+	"container.miscfeatures.advanced_note_block": "Advanced Note Block",
+	"container.miscfeatures.quartz_shredder": "Quartz Shredder",
 	
 	"item.miscfeatures.latex_bottle": "Latex Bottle",
+
+	"item.miscfeatures.stripes_armor_trim": "Smithing Template",
 
 	"block.miscfeatures.rubber_log": "Rubber Log",
 	"block.miscfeatures.rubber_wood": "Rubber Wood",
@@ -30,5 +37,13 @@
 	
 	"block.miscfeatures.rubber_block": "Rubber Block",
 
-	"block.miscfeatures.spike_block": "Spike Block"
+	"block.miscfeatures.spike_block": "Spike Block",
+	"block.miscfeatures.advanced_note_block": "Advanced Note Block",
+
+	"block.miscfeatures.quartz_shredder": "Quartz Shredder",
+
+	"block.miscfeatures.steel_wool": "Steel Wool",
+	"block.miscfeatures.burnt_steel_wool": "Burnt Steel Wool",
+
+	"trim_pattern.miscfeatures.stripes": "Stripes Armor Trim"
 }

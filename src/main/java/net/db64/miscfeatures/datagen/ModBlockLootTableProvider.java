@@ -4,8 +4,8 @@ import net.db64.miscfeatures.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
-public class ModLootTableProvider extends FabricBlockLootTableProvider {
-	public ModLootTableProvider(FabricDataOutput dataOutput) {
+public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
+	public ModBlockLootTableProvider(FabricDataOutput dataOutput) {
 		super(dataOutput);
 	}
 
@@ -34,5 +34,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 		addDrop(ModBlocks.RUBBER_BLOCK);
 
 		addDrop(ModBlocks.SPIKE_BLOCK);
+
+		addDrop(ModBlocks.ADVANCED_NOTE_BLOCK);
+
+		addDrop(ModBlocks.QUARTZ_SHREDDER);
+
+		addDrop(ModBlocks.STEEL_WOOL);
+		addDrop(ModBlocks.BURNT_STEEL_WOOL);
 	}
 }

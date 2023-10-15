@@ -1,0 +1,8 @@
+{
+  "asset_id": "miscfeatures:stripes",
+  "decal": true,
+  "description": {
+    "translate": "trim_pattern.miscfeatures.stripes"
+  },
+  "template_item": "miscfeatures:stripes_armor_trim"
+}

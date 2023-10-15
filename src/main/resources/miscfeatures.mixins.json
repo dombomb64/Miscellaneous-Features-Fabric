@@ -3,7 +3,8 @@
 	"package": "net.db64.miscfeatures.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"StickyBlocksMixin"
+		"StickyBlocksMixin",
+		"FireBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

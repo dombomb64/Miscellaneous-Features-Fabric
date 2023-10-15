@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripes_armor_trim": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "miscfeatures:stripes_armor_trim"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "miscfeatures:stripes_armor_trim"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripes_armor_trim"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "miscfeatures:stripes_armor_trim"
+    ]
+  },
+  "sends_telemetry_event": false
+}

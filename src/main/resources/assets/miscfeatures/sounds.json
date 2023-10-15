@@ -2,17 +2,8 @@
 	"block.spike_block.extend": {
 		"sounds": [
 			{
-				"name": "item/trident/pierce1",
-				"pitch": 0.5,
-				"volume": 1.0
-			},
-			{
-				"name": "item/trident/pierce2",
-				"pitch": 0.5,
-				"volume": 1.0
-			},
-			{
-				"name": "item/trident/pierce3",
+				"name": "item.trident.hit",
+				"type": "event",
 				"pitch": 0.5,
 				"volume": 1.0
 			}
@@ -22,21 +13,582 @@
 	"block.spike_block.retract": {
 		"sounds": [
 			{
-				"name": "item/trident/pierce1",
-				"pitch": 2.0,
-				"volume": 1.0
-			},
-			{
-				"name": "item/trident/pierce2",
-				"pitch": 2.0,
-				"volume": 1.0
-			},
-			{
-				"name": "item/trident/pierce3",
+				"name": "item.trident.hit",
+				"type": "event",
 				"pitch": 2.0,
 				"volume": 1.0
 			}
 		],
 		"subtitle": "subtitles.block.spike_block.retract"
+	},
+	"block.note_block.electric_guitar": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/note_block/electric_guitar",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.note_block.note"
+	},
+	"block.note_block.power_chord": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/note_block/power_chord",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.note_block.note"
+	},
+	"block.charrable.char": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/charrable/char",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.charrable.char"
+	},
+	"block.advanced_note_block.banjo.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/banjo/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.banjo.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/banjo/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.banjo.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/banjo/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.basedrum.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bd/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.basedrum.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bd/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.basedrum.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bd/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.bass.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bassattack/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.bass.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bassattack/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.bass.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bassattack/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.bell.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bell/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.bell.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bell/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.bell.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bell/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.bit.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bit/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.bit.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bit/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.bit.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/bit/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.chime.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/icechime/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.chime.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/icechime/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.chime.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/icechime/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.cow_bell.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/cow_bell/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.cow_bell.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/cow_bell/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.cow_bell.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/cow_bell/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.didgeridoo.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/didgeridoo/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.didgeridoo.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/didgeridoo/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.didgeridoo.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/didgeridoo/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.flute.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/flute/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.flute.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/flute/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.flute.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/flute/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.guitar.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/guitar/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.guitar.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/guitar/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.guitar.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/guitar/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.harp.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/harp2/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.harp.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/harp2/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.harp.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/harp2/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.hat.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/hat/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.hat.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/hat/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.hat.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/hat/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.iron_xylophone.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/iron_xylophone/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.iron_xylophone.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/iron_xylophone/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.iron_xylophone.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/iron_xylophone/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.pling.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/pling/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.pling.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/pling/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.pling.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/pling/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.snare.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/snare/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.snare.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/snare/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.snare.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/snare/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.xylophone.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/xylobone/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.xylophone.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/xylobone/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.xylophone.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/xylobone/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.electric_guitar.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/electric_guitar/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.electric_guitar.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/electric_guitar/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.electric_guitar.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/electric_guitar/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.power_chord.octave_1": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/power_chord/octave_1",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.power_chord.octave_3": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/power_chord/octave_3",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
+	},
+	"block.advanced_note_block.power_chord.octave_5": {
+		"sounds": [
+			{
+				"name": "miscfeatures:block/advanced_note_block/power_chord/octave_5",
+				"pitch": 1.0,
+				"volume": 1.0
+			}
+		],
+		"subtitle": "subtitles.block.advanced_note_block.note"
 	}
 }

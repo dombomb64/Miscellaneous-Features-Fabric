@@ -10,22 +10,22 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.CountPlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
 public class ModPlacedFeatures {
 	public static final RegistryKey<PlacedFeature> RUBBER_TREE_KEY = registerKey("rubber_tree");
+	public static final RegistryKey<PlacedFeature> RUBBER_TREE_DENSE_KEY = registerKey("rubber_tree_dense");
 	public static final RegistryKey<PlacedFeature> RUBBER_TREE_SPARSE_KEY = registerKey("rubber_tree_sparse");
 
 	public static void bootstrap(Registerable<PlacedFeature> context) {
 		var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
 		register(context, RUBBER_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_KEY),
+			PlacedFeatures.wouldSurvive(ModBlocks.RUBBER_SAPLING));
+
+		register(context, RUBBER_TREE_DENSE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_KEY),
 			VegetationPlacedFeatures.treeModifiersWithWouldSurvive(CountPlacementModifier.of(UniformIntProvider.create(5, 30)), ModBlocks.RUBBER_SAPLING));
 
 		register(context, RUBBER_TREE_SPARSE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_KEY),

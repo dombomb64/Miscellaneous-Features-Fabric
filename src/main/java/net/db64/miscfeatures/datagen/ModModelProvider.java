@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TexturedModel;
 
 public class ModModelProvider extends FabricModelProvider {
 	public ModModelProvider(FabricDataOutput output) {
@@ -36,10 +37,18 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RUBBER_BLOCK);
 
 		// The spike block uses custom models
+
+		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ADVANCED_NOTE_BLOCK);
+
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotated(ModBlocks.QUARTZ_SHREDDER, TexturedModel.ORIENTABLE);
+
+		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.STEEL_WOOL);
+		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BURNT_STEEL_WOOL);
 	}
 
 	@Override
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 		itemModelGenerator.register(ModItems.LATEX_BOTTLE, Models.GENERATED);
+		itemModelGenerator.register(ModItems.STRIPES_ARMOR_TRIM, Models.GENERATED);
 	}
 }

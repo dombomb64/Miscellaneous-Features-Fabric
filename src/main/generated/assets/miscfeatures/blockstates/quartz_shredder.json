@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "miscfeatures:block/quartz_shredder",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "miscfeatures:block/quartz_shredder"
+    },
+    "facing=south": {
+      "model": "miscfeatures:block/quartz_shredder",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "miscfeatures:block/quartz_shredder",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "group": "char_block",
+  "ingredient": {
+    "item": "miscfeatures:steel_wool"
+  },
+  "result": "miscfeatures:burnt_steel_wool"
+}

@@ -1,11 +1,6 @@
 package net.db64.miscfeatures;
 
-import net.db64.miscfeatures.datagen.ModBlockTagProvider;
-import net.db64.miscfeatures.datagen.ModItemTagProvider;
-import net.db64.miscfeatures.datagen.ModLootTableProvider;
-import net.db64.miscfeatures.datagen.ModModelProvider;
-import net.db64.miscfeatures.datagen.ModRecipeProvider;
-import net.db64.miscfeatures.datagen.ModWorldProvider;
+import net.db64.miscfeatures.datagen.*;
 import net.db64.miscfeatures.world.ModConfiguredFeatures;
 import net.db64.miscfeatures.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -18,9 +13,10 @@ public class MiscFeaturesDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
+		pack.addProvider(ModBiomeTagProvider::new);
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModItemTagProvider::new);
-		pack.addProvider(ModLootTableProvider::new);
+		pack.addProvider(ModBlockLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModWorldProvider::new);

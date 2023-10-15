@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "S": {
+      "tag": "minecraft:stone_crafting_materials"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SQS",
+    "SSS"
+  ],
+  "result": {
+    "item": "miscfeatures:quartz_shredder"
+  },
+  "show_notification": true
+}

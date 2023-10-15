@@ -1,8 +1,7 @@
 package net.db64.miscfeatures.block;
 
 import net.db64.miscfeatures.MiscFeatures;
-import net.db64.miscfeatures.block.custom.CustomLog;
-import net.db64.miscfeatures.block.custom.SpikeBlock;
+import net.db64.miscfeatures.block.custom.*;
 import net.db64.miscfeatures.item.ModItems;
 import net.db64.miscfeatures.world.tree.RubberSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -80,7 +79,18 @@ public class ModBlocks {
 		new Block(FabricBlockSettings.copyOf(Blocks.DIRT).velocityMultiplier(0.7f).sounds(BlockSoundGroup.SHROOMLIGHT).mapColor(MapColor.BLACK)));
 
 	public static final Block SPIKE_BLOCK = registerBlock("spike_block",
-		new SpikeBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque().requiresTool()));
+		new SpikeBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).requiresTool()));
+
+	public static final Block ADVANCED_NOTE_BLOCK = registerBlock("advanced_note_block",
+		new AdvancedNoteBlock(FabricBlockSettings.copyOf(Blocks.NOTE_BLOCK)));
+
+	public static final Block QUARTZ_SHREDDER = registerBlock("quartz_shredder",
+		new QuartzShredder(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+
+	public static final Block STEEL_WOOL = registerBlock("steel_wool",
+		new CharrableBlock(FabricBlockSettings.copyOf(Blocks.DIRT).mapColor(MapColor.LIGHT_GRAY).sounds(BlockSoundGroup.HANGING_ROOTS).burnable(), Blocks.STONE.getDefaultState()));
+	public static final Block BURNT_STEEL_WOOL = registerBlock("burnt_steel_wool",
+		new Block(FabricBlockSettings.copyOf(Blocks.DIRT).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.HANGING_ROOTS).strength(1.5f, 6.0f)));
 
 	private static Block registerBlock(String name, Block block, boolean obtainable) {
 		if (obtainable)
@@ -115,6 +125,8 @@ public class ModBlocks {
 
 		((CustomLog)DRIPPING_RUBBER_WOOD).bottleItem = ModItems.LATEX_BOTTLE;
 		((CustomLog)DRIPPING_RUBBER_WOOD).bottleOutcome = ModBlocks.STRIPPED_RUBBER_WOOD;
+
+		((CharrableBlock)STEEL_WOOL).turnInto = ModBlocks.BURNT_STEEL_WOOL.getDefaultState();
 	}
 
 	private static CustomLog createLogBlock(MapColor topMapColor, MapColor sideMapColor, BlockSoundGroup soundGroup) {

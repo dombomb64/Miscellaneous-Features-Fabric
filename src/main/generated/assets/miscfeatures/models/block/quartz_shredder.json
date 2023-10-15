@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "miscfeatures:block/quartz_shredder_front",
+    "side": "miscfeatures:block/quartz_shredder_side",
+    "top": "miscfeatures:block/quartz_shredder_top"
+  }
+}
