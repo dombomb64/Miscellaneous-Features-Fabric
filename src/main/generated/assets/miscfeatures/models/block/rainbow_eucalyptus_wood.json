@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "miscfeatures:block/rainbow_eucalyptus_log",
+    "side": "miscfeatures:block/rainbow_eucalyptus_log"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "miscfeatures:stripped_rainbow_eucalyptus_log"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "item": "miscfeatures:stripped_rainbow_eucalyptus_wood"
+  },
+  "show_notification": true
+}

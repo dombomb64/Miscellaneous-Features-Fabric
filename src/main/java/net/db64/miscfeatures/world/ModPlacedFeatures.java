@@ -19,17 +19,26 @@ public class ModPlacedFeatures {
 	public static final RegistryKey<PlacedFeature> RUBBER_TREE_DENSE_KEY = registerKey("rubber_tree_dense");
 	public static final RegistryKey<PlacedFeature> RUBBER_TREE_SPARSE_KEY = registerKey("rubber_tree_sparse");
 
+	public static final RegistryKey<PlacedFeature> RAINBOW_EUCALYPTUS_TREE_KEY = registerKey("rainbow_eucalyptus_tree");
+	public static final RegistryKey<PlacedFeature> RAINBOW_EUCALYPTUS_TREE_DENSE_KEY = registerKey("rainbow_eucalyptus_tree_dense");
+	public static final RegistryKey<PlacedFeature> RAINBOW_EUCALYPTUS_TREE_SPARSE_KEY = registerKey("rainbow_eucalyptus_tree_sparse");
+
 	public static void bootstrap(Registerable<PlacedFeature> context) {
 		var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
 		register(context, RUBBER_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_KEY),
 			PlacedFeatures.wouldSurvive(ModBlocks.RUBBER_SAPLING));
-
 		register(context, RUBBER_TREE_DENSE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_KEY),
 			VegetationPlacedFeatures.treeModifiersWithWouldSurvive(CountPlacementModifier.of(UniformIntProvider.create(5, 30)), ModBlocks.RUBBER_SAPLING));
-
 		register(context, RUBBER_TREE_SPARSE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_KEY),
 			VegetationPlacedFeatures.treeModifiersWithWouldSurvive(CountPlacementModifier.of(UniformIntProvider.create(1, 3)), ModBlocks.RUBBER_SAPLING));
+
+		register(context, RAINBOW_EUCALYPTUS_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RAINBOW_EUCALYPTUS_TREE_KEY),
+			PlacedFeatures.wouldSurvive(ModBlocks.RAINBOW_EUCALYPTUS_SAPLING));
+		register(context, RAINBOW_EUCALYPTUS_TREE_DENSE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RAINBOW_EUCALYPTUS_TREE_KEY),
+			VegetationPlacedFeatures.treeModifiersWithWouldSurvive(CountPlacementModifier.of(UniformIntProvider.create(5, 30)), ModBlocks.RAINBOW_EUCALYPTUS_SAPLING));
+		register(context, RAINBOW_EUCALYPTUS_TREE_SPARSE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RAINBOW_EUCALYPTUS_TREE_KEY),
+			VegetationPlacedFeatures.treeModifiersWithWouldSurvive(CountPlacementModifier.of(UniformIntProvider.create(1, 3)), ModBlocks.RAINBOW_EUCALYPTUS_SAPLING));
 	}
 
 	public static RegistryKey<PlacedFeature> registerKey(String name) {

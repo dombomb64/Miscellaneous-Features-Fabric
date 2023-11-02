@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "miscfeatures:block/rainbow_eucalyptus_slab"
+    },
+    "type=double": {
+      "model": "miscfeatures:block/rainbow_eucalyptus_planks"
+    },
+    "type=top": {
+      "model": "miscfeatures:block/rainbow_eucalyptus_slab_top"
+    }
+  }
+}

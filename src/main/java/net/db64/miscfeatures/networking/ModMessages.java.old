@@ -1,0 +1,17 @@
+package net.db64.miscfeatures.networking;
+
+import net.db64.miscfeatures.MiscFeatures;
+import net.db64.miscfeatures.networking.packet.CustomLogStripS2CPacket;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.minecraft.util.Identifier;
+
+public class ModMessages {
+	public static final Identifier CUSTOM_LOG_STRIP_ID = new Identifier(MiscFeatures.MOD_ID, "custom_log_strip");
+
+	public static void registerC2SPackets() {
+	}
+
+	public static void registerS2CPackets() {
+		ClientPlayNetworking.registerGlobalReceiver(CUSTOM_LOG_STRIP_ID, CustomLogStripS2CPacket::recieve);
+	}
+}

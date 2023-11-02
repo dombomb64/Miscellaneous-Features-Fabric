@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "miscfeatures:block/rainbow_eucalyptus_pressure_plate"
+    },
+    "powered=true": {
+      "model": "miscfeatures:block/rainbow_eucalyptus_pressure_plate_down"
+    }
+  }
+}

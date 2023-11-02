@@ -1,0 +1,18 @@
+package net.db64.miscfeatures.networking.packet;
+
+import net.fabricmc.fabric.api.networking.v1.PacketSender;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ClientPlayNetworkHandler;
+import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.network.PacketByteBuf;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.util.Identifier;
+
+public class CustomLogStripS2CPacket {
+	public static void send(ServerPlayerEntity player, Identifier channelName, PacketByteBuf buf) {
+
+	}
+	public static void recieve(MinecraftClient client, ClientPlayerEntity player, ClientPlayNetworkHandler handler, PacketByteBuf buf, PacketSender responseSender) {
+
+	}
+}

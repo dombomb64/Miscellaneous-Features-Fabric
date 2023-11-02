@@ -7,6 +7,8 @@
 	"subtitles.block.spike_block.retract": "Spike block retracts",
 	"subtitles.item.flintandsteel.char_block": "Flint and Steel chars block",
 	"subtitles.item.firecharge.char_block": "Fire Charge chars block",
+	"subtitles.entity.sniffer.scream": "Sniffer screams",
+	"subtitles.entity.sniffer.launch": "Sniffer launches",
 
 	"container.miscfeatures.advanced_note_block": "Advanced Note Block",
 	"container.miscfeatures.quartz_shredder": "Quartz Shredder",
@@ -14,6 +16,11 @@
 	"item.miscfeatures.latex_bottle": "Latex Bottle",
 
 	"item.miscfeatures.stripes_armor_trim": "Smithing Template",
+
+	"item.miscfeatures.rainbow_sawdust": "Rainbow Sawdust",
+	"item.miscfeatures.rainbow_sawdust.tooltip": "A perfect on-the-go snack.",
+
+	"item.miscfeatures.animal_feed": "Animal Feed",
 
 	"block.miscfeatures.rubber_log": "Rubber Log",
 	"block.miscfeatures.rubber_wood": "Rubber Wood",
@@ -34,6 +41,24 @@
 
 	"block.miscfeatures.rubber_leaves": "Rubber Leaves",
 	"block.miscfeatures.rubber_sapling": "Rubber Sapling",
+
+	"block.miscfeatures.rainbow_eucalyptus_log": "Rainbow Eucalyptus Log",
+	"block.miscfeatures.rainbow_eucalyptus_wood": "Rainbow Eucalyptus Wood",
+	"block.miscfeatures.stripped_rainbow_eucalyptus_log": "Stripped Rainbow Eucalyptus Log",
+	"block.miscfeatures.stripped_rainbow_eucalyptus_wood": "Stripped Rainbow Eucalyptus Wood",
+
+	"block.miscfeatures.rainbow_eucalyptus_planks": "Rainbow Eucalyptus Planks",
+	"block.miscfeatures.rainbow_eucalyptus_stairs": "Rainbow Eucalyptus Stairs",
+	"block.miscfeatures.rainbow_eucalyptus_slab": "Rainbow Eucalyptus Slab",
+	"block.miscfeatures.rainbow_eucalyptus_fence": "Rainbow Eucalyptus Fence",
+	"block.miscfeatures.rainbow_eucalyptus_fence_gate": "Rainbow Eucalyptus Fence Gate",
+	"block.miscfeatures.rainbow_eucalyptus_door": "Rainbow Eucalyptus Door",
+	"block.miscfeatures.rainbow_eucalyptus_trapdoor": "Rainbow Eucalyptus Trapdoor",
+	"block.miscfeatures.rainbow_eucalyptus_pressure_plate": "Rainbow Eucalyptus Pressure Plate",
+	"block.miscfeatures.rainbow_eucalyptus_button": "Rainbow Eucalyptus Button",
+
+	"block.miscfeatures.rainbow_eucalyptus_leaves": "Rainbow Eucalyptus Leaves",
+	"block.miscfeatures.rainbow_eucalyptus_sapling": "Rainbow Eucalyptus Sapling",
 	
 	"block.miscfeatures.rubber_block": "Rubber Block",
 

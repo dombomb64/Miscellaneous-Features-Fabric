@@ -39,7 +39,7 @@ public class CustomLog extends PillarBlock {
 	}
 
 	public boolean canBeStripped() {
-		return stripOutcomes.size() == stripChances.size() && stripOutcomes.size() != 0;
+		return stripOutcomes.size() == stripChances.size() && !stripOutcomes.isEmpty();
 	}
 
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
@@ -47,7 +47,7 @@ public class CustomLog extends PillarBlock {
 		//MiscFeatures.LOGGER.info(itemStack.getItem().getClass().getName() + ", client = " + world.isClient());
 
 		// Axe
-		if (canBeStripped() && itemStack.getItem() instanceof AxeItem) {
+		/*if (canBeStripped() && itemStack.getItem() instanceof AxeItem) {
 			// Reject client and play sound
 			if (world.isClient()) {
 				return ActionResult.SUCCESS;
@@ -87,7 +87,7 @@ public class CustomLog extends PillarBlock {
 			}
 
 			return ActionResult.CONSUME;
-		}
+		}*/
 
 		// Glass bottle
 		if (bottleItem != null && itemStack.isOf(Items.GLASS_BOTTLE)) {

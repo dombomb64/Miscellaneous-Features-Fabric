@@ -14,5 +14,10 @@ public class ModTreeGeneration {
 			GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.RUBBER_TREE_DENSE_KEY);
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE),
 			GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.RUBBER_TREE_SPARSE_KEY);
+
+		BiomeModifications.addFeature(BiomeSelectors.tag(ModTags.Biomes.IS_NON_SPARSE_JUNGLE),
+			GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.RAINBOW_EUCALYPTUS_TREE_DENSE_KEY);
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE),
+			GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.RAINBOW_EUCALYPTUS_TREE_SPARSE_KEY);
 	}
 }

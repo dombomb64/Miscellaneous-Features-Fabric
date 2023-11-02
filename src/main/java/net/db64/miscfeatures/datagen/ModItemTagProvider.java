@@ -22,5 +22,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 			.add(ModBlocks.STRIPPED_RUBBER_WOOD.asItem())
 			.add(ModBlocks.DRIPPING_RUBBER_LOG.asItem())
 			.add(ModBlocks.DRIPPING_RUBBER_WOOD.asItem());
+
+		getOrCreateTagBuilder(ModTags.Items.RAINBOW_EUCALYPTUS_LOGS)
+			.add(ModBlocks.RAINBOW_EUCALYPTUS_LOG.asItem())
+			.add(ModBlocks.RAINBOW_EUCALYPTUS_WOOD.asItem())
+			.add(ModBlocks.STRIPPED_RAINBOW_EUCALYPTUS_LOG.asItem())
+			.add(ModBlocks.STRIPPED_RAINBOW_EUCALYPTUS_WOOD.asItem());
 	}
 }

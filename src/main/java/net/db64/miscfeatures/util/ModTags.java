@@ -11,6 +11,7 @@ import net.minecraft.world.biome.Biome;
 public class ModTags {
 	public static class Blocks {
 		public static final TagKey<Block> RUBBER_LOGS = createTag("rubber_logs");
+		public static final TagKey<Block> RAINBOW_EUCALYPTUS_LOGS = createTag("rainbow_eucalyptus_logs");
 
 		private static TagKey<Block> createTag(String name) {
 			return TagKey.of(RegistryKeys.BLOCK, new Identifier(MiscFeatures.MOD_ID, name));
@@ -19,6 +20,7 @@ public class ModTags {
 
 	public static class Items {
 		public static final TagKey<Item> RUBBER_LOGS = createTag("rubber_logs");
+		public static final TagKey<Item> RAINBOW_EUCALYPTUS_LOGS = createTag("rainbow_eucalyptus_logs");
 
 		private static TagKey<Item> createTag(String name) {
 			return TagKey.of(RegistryKeys.ITEM, new Identifier(MiscFeatures.MOD_ID, name));

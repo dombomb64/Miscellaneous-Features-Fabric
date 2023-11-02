@@ -1,5 +1,9 @@
-// 1.20.2	2023-10-15T16:56:41.5989605	Miscellaneous Features/miscfeatures
+// 1.20.2	2023-11-02T15:36:04.8764553	Miscellaneous Features/miscfeatures
+beaef1d3458cc1ee637f276830bbaa81ac671f0d data\miscfeatures\worldgen\placed_feature\rainbow_eucalyptus_tree.json
 92488ae32abb46a6f46aaf011d1f52604db17445 data\miscfeatures\worldgen\configured_feature\rubber_tree.json
 25639d444aad018fa4f76eb42467ec8b5204a050 data\miscfeatures\worldgen\placed_feature\rubber_tree_dense.json
+68477146920d7d243000e1c0373bbbc261f93279 data\miscfeatures\worldgen\placed_feature\rainbow_eucalyptus_tree_dense.json
 7969c34e84a352225ee3699fe065a960ceb0064e data\miscfeatures\worldgen\placed_feature\rubber_tree.json
 01001b2aaf976c6d29f68d138c4e936e9cea46d7 data\miscfeatures\worldgen\placed_feature\rubber_tree_sparse.json
+6500f77030565860173a9d33489acad04638008b data\miscfeatures\worldgen\placed_feature\rainbow_eucalyptus_tree_sparse.json
+9d9d75f7f9b613e8f65531e41b2214055f234007 data\miscfeatures\worldgen\configured_feature\rainbow_eucalyptus_tree.json

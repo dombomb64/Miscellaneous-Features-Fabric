@@ -34,6 +34,23 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.RUBBER_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 		blockStateModelGenerator.registerItemModel(ModBlocks.RUBBER_SAPLING); // So that the sapling is 2D in the inventory
 
+		blockStateModelGenerator.registerLog(ModBlocks.RAINBOW_EUCALYPTUS_LOG).log(ModBlocks.RAINBOW_EUCALYPTUS_LOG).wood(ModBlocks.RAINBOW_EUCALYPTUS_WOOD);
+		blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_RAINBOW_EUCALYPTUS_LOG).log(ModBlocks.STRIPPED_RAINBOW_EUCALYPTUS_LOG).wood(ModBlocks.STRIPPED_RAINBOW_EUCALYPTUS_WOOD);
+
+		BlockStateModelGenerator.BlockTexturePool rainbowEucalyptusPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAINBOW_EUCALYPTUS_PLANKS);
+		rainbowEucalyptusPlanksPool.stairs(ModBlocks.RAINBOW_EUCALYPTUS_STAIRS);
+		rainbowEucalyptusPlanksPool.slab(ModBlocks.RAINBOW_EUCALYPTUS_SLAB);
+		rainbowEucalyptusPlanksPool.fence(ModBlocks.RAINBOW_EUCALYPTUS_FENCE);
+		rainbowEucalyptusPlanksPool.fenceGate(ModBlocks.RAINBOW_EUCALYPTUS_FENCE_GATE);
+		blockStateModelGenerator.registerDoor(ModBlocks.RAINBOW_EUCALYPTUS_DOOR);
+		blockStateModelGenerator.registerTrapdoor(ModBlocks.RAINBOW_EUCALYPTUS_TRAPDOOR);
+		rainbowEucalyptusPlanksPool.pressurePlate(ModBlocks.RAINBOW_EUCALYPTUS_PRESSURE_PLATE);
+		rainbowEucalyptusPlanksPool.button(ModBlocks.RAINBOW_EUCALYPTUS_BUTTON);
+
+		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAINBOW_EUCALYPTUS_LEAVES);
+		blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.RAINBOW_EUCALYPTUS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+		blockStateModelGenerator.registerItemModel(ModBlocks.RAINBOW_EUCALYPTUS_SAPLING); // So that the sapling is 2D in the inventory
+
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RUBBER_BLOCK);
 
 		// The spike block uses custom models
@@ -50,5 +67,7 @@ public class ModModelProvider extends FabricModelProvider {
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 		itemModelGenerator.register(ModItems.LATEX_BOTTLE, Models.GENERATED);
 		itemModelGenerator.register(ModItems.STRIPES_ARMOR_TRIM, Models.GENERATED);
+		itemModelGenerator.register(ModItems.RAINBOW_SAWDUST, Models.GENERATED);
+		itemModelGenerator.register(ModItems.ANIMAL_FEED, Models.GENERATED);
 	}
 }

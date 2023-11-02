@@ -46,6 +46,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 			ModBlocks.RUBBERWOOD_DOOR.asItem(), ModBlocks.RUBBERWOOD_TRAPDOOR.asItem(),
 			ModBlocks.RUBBERWOOD_PRESSURE_PLATE.asItem(), ModBlocks.RUBBERWOOD_BUTTON.asItem());
 
+		// Rainbow Eucalyptus wood set
+		templates.makeWoodType(exporter, new Item[][] {{ModBlocks.RAINBOW_EUCALYPTUS_LOG.asItem(), ModBlocks.RAINBOW_EUCALYPTUS_WOOD.asItem()},
+				{ModBlocks.STRIPPED_RAINBOW_EUCALYPTUS_LOG.asItem(), ModBlocks.STRIPPED_RAINBOW_EUCALYPTUS_WOOD.asItem()}},
+			ModTags.Items.RAINBOW_EUCALYPTUS_LOGS, ModBlocks.RAINBOW_EUCALYPTUS_PLANKS.asItem(),
+			ModBlocks.RAINBOW_EUCALYPTUS_STAIRS.asItem(), ModBlocks.RAINBOW_EUCALYPTUS_SLAB.asItem(),
+			ModBlocks.RAINBOW_EUCALYPTUS_FENCE.asItem(), ModBlocks.RAINBOW_EUCALYPTUS_FENCE_GATE.asItem(),
+			ModBlocks.RAINBOW_EUCALYPTUS_DOOR.asItem(), ModBlocks.RAINBOW_EUCALYPTUS_TRAPDOOR.asItem(),
+			ModBlocks.RAINBOW_EUCALYPTUS_PRESSURE_PLATE.asItem(), ModBlocks.RAINBOW_EUCALYPTUS_BUTTON.asItem());
+
 		// Rubber Block and Reverse
 		offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, ModBlocks.RUBBER_BLOCK.asItem(), ModItems.LATEX_BOTTLE);
 		ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LATEX_BOTTLE, 4)
@@ -101,7 +110,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 			offerPlanksRecipe(exporter, planks, logTag, 4);
 
 			makeStairs(exporter, stairs, planks);
-			offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBBERWOOD_SLAB, planks);
+			offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, slab, planks);
 
 			makeWoodenFence(exporter, fence, planks);
 			makeWoodenFenceGate(exporter, fenceGate, planks);
@@ -109,7 +118,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 			makeDoor(exporter, door, planks);
 			makeTrapdoor(exporter, trapdoor, planks);
 
-			offerPressurePlateRecipe(exporter, ModBlocks.RUBBERWOOD_PRESSURE_PLATE, planks);
+			offerPressurePlateRecipe(exporter, pressurePlate, planks);
 			makeButton(exporter, button, planks);
 		}
 

@@ -2,6 +2,7 @@ package net.db64.miscfeatures.block.custom;
 
 import net.db64.miscfeatures.MiscFeatures;
 import net.db64.miscfeatures.block.ModBlocks;
+import net.db64.miscfeatures.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -48,6 +49,18 @@ public class QuartzShredder extends HorizontalFacingBlock {
 
 	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+		return shredStuff(state, world, pos);
+	}
+
+	// Too buggy :(
+	/*@Override
+	public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
+		if (world.isReceivingRedstonePower(pos) || world.isReceivingRedstonePower(pos.up())) {
+			shredStuff(state, world, pos);
+		}
+	}*/
+
+	public ActionResult shredStuff(BlockState state, World world, BlockPos pos) {
 		// I don't feel like just sticking it in the initializer lol
 		if (recipes == null) {
 			initRecipes();
@@ -103,7 +116,11 @@ public class QuartzShredder extends HorizontalFacingBlock {
 			//MiscFeatures.LOGGER.info("Correct shredding recipe: " + recipe.output.getName().toString());
 			if (world instanceof ServerWorld) {
 				for (ItemEntity itemEntity : recipeInputs) {
-					itemEntity.discard();
+					MiscFeatures.LOGGER.info("Decrementing stack of item " + itemEntity.getName().toString());
+					itemEntity.getStack().decrement(1);
+					if (itemEntity.getStack().getCount() <= 0) {
+						itemEntity.discard();
+					}
 				}
 				//Block.dropStack(world, new BlockPos((int)topPos.x, (int)topPos.y, (int)topPos.z), recipe.output);
 				world.spawnEntity(new ItemEntity(world, topPos.x, topPos.y, topPos.z, recipe.output, 0, 0.25, 0));
@@ -111,7 +128,7 @@ public class QuartzShredder extends HorizontalFacingBlock {
 			else {
 				for (ItemEntity itemEntity : recipeInputs) {
 					for (int i = 0; i < 10; i++) {
-						((ClientWorld) world).addParticle(new ItemStackParticleEffect(ParticleTypes.ITEM, itemEntity.getStack()), itemEntity.getX(), itemEntity.getY(), itemEntity.getZ(), (Math.random() % 0.1) - 0.05, Math.random() % 0.1, (Math.random() % 0.1) - 0.05);
+						world.addParticle(new ItemStackParticleEffect(ParticleTypes.ITEM, itemEntity.getStack()), itemEntity.getX(), itemEntity.getY(), itemEntity.getZ(), (Math.random() % 0.1) - 0.05, Math.random() % 0.1, (Math.random() % 0.1) - 0.05);
 					}
 				}
 			}
@@ -138,6 +155,22 @@ public class QuartzShredder extends HorizontalFacingBlock {
 		recipes.add(new Recipe(
 			List.of(Items.IRON_INGOT),
 			ModBlocks.STEEL_WOOL.asItem().getDefaultStack()
+		));
+
+		// Rainbow Sawdust
+		recipes.add(new Recipe(
+			List.of(ModBlocks.RAINBOW_EUCALYPTUS_LOG.asItem()),
+			ModItems.RAINBOW_SAWDUST.getDefaultStack()
+		));
+		recipes.add(new Recipe(
+			List.of(ModBlocks.RAINBOW_EUCALYPTUS_WOOD.asItem()),
+			ModItems.RAINBOW_SAWDUST.getDefaultStack()
+		));
+
+		// Animal Feed
+		recipes.add(new Recipe(
+			List.of(Items.WHEAT, Items.WHEAT_SEEDS, Items.CARROT),
+			ModItems.ANIMAL_FEED.getDefaultStack()
 		));
 
 		/*// Test recipe 1

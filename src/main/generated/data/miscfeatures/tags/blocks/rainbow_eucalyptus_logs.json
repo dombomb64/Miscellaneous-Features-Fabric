@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "miscfeatures:rainbow_eucalyptus_log",
+    "miscfeatures:rainbow_eucalyptus_wood",
+    "miscfeatures:stripped_rainbow_eucalyptus_log",
+    "miscfeatures:stripped_rainbow_eucalyptus_wood"
+  ]
+}

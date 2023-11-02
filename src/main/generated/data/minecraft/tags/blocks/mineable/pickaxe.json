@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "miscfeatures:spike_block"
+    "miscfeatures:spike_block",
+    "miscfeatures:quartz_shredder"
   ]
 }
