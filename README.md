@@ -15,3 +15,5 @@ Autumnity - Latex gathering mechanic
 Bamboo Spikes - Spike Block
 
 [Diansu](https://youtu.be/xL0dykSFFXM?si=ASLGDXqEy8WCqK19&t=472 "I Invented a Minecraft Mod to Take Over an SMP") - Electric guitar instrument
+
+Trail Mix - Rainbow Sawdust
