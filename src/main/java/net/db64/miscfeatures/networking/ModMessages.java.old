@@ -6,12 +6,14 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.util.Identifier;
 
 public class ModMessages {
-	public static final Identifier CUSTOM_LOG_STRIP_ID = new Identifier(MiscFeatures.MOD_ID, "custom_log_strip");
+	//public static final Identifier CUSTOM_LOG_STRIP_ID = new Identifier(MiscFeatures.MOD_ID, "custom_log_strip");
+	public static final Identifier COMBO_BREAK_TICKS_SYNC_ID = new Identifier(MiscFeatures.MOD_ID, "combo_break_ticks_sync");
 
 	public static void registerC2SPackets() {
+
 	}
 
 	public static void registerS2CPackets() {
-		ClientPlayNetworking.registerGlobalReceiver(CUSTOM_LOG_STRIP_ID, CustomLogStripS2CPacket::recieve);
+		//ClientPlayNetworking.registerGlobalReceiver(CUSTOM_LOG_STRIP_ID, CustomLogStripS2CPacket::recieve);
 	}
 }

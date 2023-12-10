@@ -1,29 +1,17 @@
 package net.db64.miscfeatures.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import com.llamalad7.mixinextras.sugar.ref.LocalRef;
-import net.db64.miscfeatures.block.custom.CustomLog;
+import net.db64.miscfeatures.block.custom.CustomLogBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PillarBlock;
-import net.minecraft.client.world.ClientWorld;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Optional;
 
 @Mixin(AxeItem.class)
@@ -48,14 +36,14 @@ public class AxeItemMixin {
 		var state = world.getBlockState(blockPos);
 		var block = state.getBlock();
 		/*if (world instanceof ClientWorld) {
-			if (block instanceof CustomLog logBlock && logBlock.canBeStripped()) {
+			if (block instanceof CustomLogBlock logBlock && logBlock.canBeStripped()) {
 				return Optional.of(state);
 			}
 			return value;
 		}*/
 
-		// If it's a CustomLog and it can be stripped
-		if (block instanceof CustomLog logBlock && logBlock.canBeStripped()/* && !STRIPPED_BLOCKS.containsKey(block)*/)
+		// If it's a CustomLogBlock and it can be stripped
+		if (block instanceof CustomLogBlock logBlock && logBlock.canBeStripped()/* && !STRIPPED_BLOCKS.containsKey(block)*/)
 		{
 			ArrayList<Block> stripOutcomes = logBlock.stripOutcomes;
 			ArrayList<Float> stripChances = logBlock.stripChances;

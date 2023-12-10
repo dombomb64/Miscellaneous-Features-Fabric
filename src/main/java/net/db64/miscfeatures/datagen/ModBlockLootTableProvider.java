@@ -1,8 +1,22 @@
 package net.db64.miscfeatures.datagen;
 
 import net.db64.miscfeatures.block.ModBlocks;
+import net.db64.miscfeatures.block.custom.WarpedWartCropBlock;
+import net.db64.miscfeatures.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LeafEntry;
+import net.minecraft.loot.function.ApplyBonusLootFunction;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
 
 public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
 	public ModBlockLootTableProvider(FabricDataOutput dataOutput) {
@@ -59,5 +73,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
 
 		addDrop(ModBlocks.STEEL_WOOL);
 		addDrop(ModBlocks.BURNT_STEEL_WOOL);
+
+		addDrop(ModBlocks.WARPED_WART, (Block block) -> LootTable.builder().pool(this.applyExplosionDecay(block, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0f)).with((((LeafEntry.Builder<?>) ItemEntry.builder(ModItems.WARPED_WART).apply((SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(WarpedWartCropBlock.AGE, 3)))))).apply((ApplyBonusLootFunction.uniformBonusCount(Enchantments.FORTUNE).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(WarpedWartCropBlock.AGE, 3))))))))));
 	}
 }

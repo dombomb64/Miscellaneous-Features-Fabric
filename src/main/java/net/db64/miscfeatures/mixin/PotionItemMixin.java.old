@@ -1,0 +1,25 @@
+package net.db64.miscfeatures.mixin;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.PotionItem;
+import net.minecraft.text.Text;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+import java.util.List;
+
+@Mixin(PotionItem.class)
+public class PotionItemMixin {
+	@Redirect(
+		method = "appendTooltip",
+		at = @At(
+			value = "INVOKE",
+			target = "Lnet/minecraft/potion/PotionUtil;buildTooltip(Lnet/minecraft/item/ItemStack;Ljava/util/List;F)V",
+			ordinal = 0
+		)
+	)
+	private void alertCreativePlayer(ItemStack stack, List<Text> list, float durationMultiplier) {
+		// This was gonna have it show what kind of instant death the potion would have but I decided to make it my own item
+	}
+}

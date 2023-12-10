@@ -4,17 +4,24 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"AxeItemMixin",
+		"BrewingRecipeRegistryMixin",
 		"CowEntityMixin",
+		"EntityMixin",
 		"FireBlockMixin",
 		"GoatBrainMixin",
 		"GoatEntityMixin",
-		"ModEntityDataSaverMixin",
+		"LivingEntityMixin",
+		"MobEntityMixin",
+		"PistonHandlerMixin",
+		"PlayerEntityMixin",
 		"RabbitEntityMixin",
 		"SheepEntityMixin",
 		"SnifferEntityMixin",
-		"StickyBlocksMixin"
+		"TargetPredicateMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	}
+	},
+	"client": [
+	]
 }

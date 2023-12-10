@@ -2,15 +2,14 @@ package net.db64.miscfeatures.item;
 
 import net.db64.miscfeatures.MiscFeatures;
 import net.db64.miscfeatures.block.ModBlocks;
-import net.db64.miscfeatures.item.custom.RainbowSawdust;
+import net.db64.miscfeatures.item.custom.HorriblyMisspelledCheeseburgerItem;
+import net.db64.miscfeatures.item.custom.InstantDeathPotionItem;
+import net.db64.miscfeatures.item.custom.RainbowSawdustItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
-import net.minecraft.item.SmithingTemplateItem;
-import net.minecraft.item.trim.ArmorTrimPatterns;
+import net.minecraft.item.*;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -22,10 +21,14 @@ public class ModItems {
 		new Item(new FabricItemSettings().recipeRemainder(Items.GLASS_BOTTLE)));
 	public static final Item STRIPES_ARMOR_TRIM = registerItem("stripes_armor_trim",
 		SmithingTemplateItem.of(RegistryKey.of(RegistryKeys.TRIM_PATTERN, new Identifier(MiscFeatures.MOD_ID, "stripes"))));
-	public static final Item RAINBOW_SAWDUST = registerItem("rainbow_sawdust",
-		new RainbowSawdust(new FabricItemSettings().food(ModFoodComponents.RAINBOW_SAWDUST)));
+	public static Item RAINBOW_SAWDUST;
 	public static final Item ANIMAL_FEED = registerItem("animal_feed",
 		new Item(new FabricItemSettings()));
+	public static Item HORRIBLY_MISSPELLED_CHEESEBURGER;
+	public static final Item WARPED_WART = registerItem("warped_wart",
+		new AliasedBlockItem(ModBlocks.WARPED_WART, new FabricItemSettings()));
+	public static final Item INSTANT_DEATH_POTION = registerItem("instant_death_potion",
+		new InstantDeathPotionItem(new FabricItemSettings().maxCount(1)));
 
 	private static Item registerItem(String name, Item item) {
 		MiscFeatures.LOGGER.debug("Registering item " + MiscFeatures.MOD_ID + ":" + name);
@@ -33,6 +36,13 @@ public class ModItems {
 	}
 
 	public static void registerModItems() {
+		MiscFeatures.LOGGER.debug("Registering items for Miscellaneous Features (" + MiscFeatures.MOD_ID + ")");
+
+		RAINBOW_SAWDUST = registerItem("rainbow_sawdust",
+			new RainbowSawdustItem(new FabricItemSettings().food(ModFoodComponents.RAINBOW_SAWDUST)));
+		HORRIBLY_MISSPELLED_CHEESEBURGER = registerItem("horribly_misspelled_cheeseburger",
+			new HorriblyMisspelledCheeseburgerItem(new FabricItemSettings().food(ModFoodComponents.HORRIBLY_MISSPELLED_CHEESEBURGER).maxDamage(100)));
+
 		MiscFeatures.LOGGER.debug("Registering vanilla item groups for Miscellaneous Features (" + MiscFeatures.MOD_ID + ")");
 
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(VanillaItemGroups::addItemsToBuildingBlocksItemGroup);
@@ -41,6 +51,18 @@ public class ModItems {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(VanillaItemGroups::addItemsToRedstoneItemGroup);
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(VanillaItemGroups::addItemsToFoodAndDrinkItemGroup);
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(VanillaItemGroups::addItemsToIngredientsItemGroup);
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(VanillaItemGroups::addItemsToOperatorItemsItemGroup);
+	}
+
+	public static ItemStack getInstantDeathPotion(boolean good) {
+		var nbt = new NbtCompound();
+		nbt.put("miscfeatures:data", new NbtCompound());
+		nbt.getCompound("miscfeatures:data").putBoolean(InstantDeathPotionItem.IS_EFFECT_GOOD_KEY, good);
+
+		var item = new ItemStack(ModItems.INSTANT_DEATH_POTION, 1);
+		item.setNbt(nbt);
+
+		return item;
 	}
 
 	private static class VanillaItemGroups {
@@ -102,12 +124,20 @@ public class ModItems {
 
 		public static void addItemsToFoodAndDrinkItemGroup(FabricItemGroupEntries entries) {
 			entries.add(ModItems.RAINBOW_SAWDUST);
+			// The cheeseburger is so rare and overpowered that it's not even in the normal creative inventory
+			entries.add(ModItems.getInstantDeathPotion(true));
+			entries.add(ModItems.getInstantDeathPotion(false));
 		}
 
 		public static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
 			entries.add(ModItems.LATEX_BOTTLE);
 			entries.add(ModItems.STRIPES_ARMOR_TRIM);
 			entries.add(ModItems.ANIMAL_FEED);
+			entries.add(ModItems.WARPED_WART);
+		}
+
+		public static void addItemsToOperatorItemsItemGroup(FabricItemGroupEntries entries) {
+			entries.add(ModItems.HORRIBLY_MISSPELLED_CHEESEBURGER);
 		}
 	}
 }

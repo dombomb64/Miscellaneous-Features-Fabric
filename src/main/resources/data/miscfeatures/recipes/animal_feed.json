@@ -1,0 +1,18 @@
+{
+	"type": "miscfeatures:quartz_shredder",
+	"ingredients": [
+		{
+			"item": "minecraft:wheat"
+		},
+		{
+			"item": "minecraft:wheat_seeds"
+		},
+		{
+			"item": "minecraft:carrot"
+		}
+	],
+	"output": {
+		"item": "miscfeatures:animal_feed",
+		"count": 1
+	}
+}

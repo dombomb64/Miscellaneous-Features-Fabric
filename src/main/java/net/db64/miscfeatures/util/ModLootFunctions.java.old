@@ -1,0 +1,17 @@
+package net.db64.miscfeatures.util;
+
+import com.mojang.serialization.Codec;
+import net.db64.miscfeatures.MiscFeatures;
+import net.minecraft.loot.function.LootFunction;
+import net.minecraft.loot.function.LootFunctionType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+
+public class ModLootFunctions {
+	public static final LootFunctionType INSTANT_DEATH_POTION = register("instant_death_potion", InstantDeathPotionLootFunction.CODEC);
+	
+	private static LootFunctionType register(String id, Codec<? extends LootFunction> codec) {
+		return Registry.register(Registries.LOOT_FUNCTION_TYPE, new Identifier(MiscFeatures.MOD_ID, id), new LootFunctionType(codec));
+	}
+}

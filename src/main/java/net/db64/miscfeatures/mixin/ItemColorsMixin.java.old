@@ -1,0 +1,17 @@
+package net.db64.miscfeatures.mixin;
+
+import net.fabricmc.fabric.impl.client.rendering.ColorProviderRegistryImpl;
+import net.minecraft.client.color.block.BlockColors;
+import net.minecraft.client.color.item.ItemColors;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+@Mixin(ItemColors.class)
+public class ItemColorsMixin {
+	@Inject(method = "create", at = @At("RETURN"))
+	private static void create(BlockColors blockMap, CallbackInfoReturnable<ItemColors> info) {
+		ColorProviderRegistryImpl.ITEM.initialize(info.getReturnValue());
+	}
+}

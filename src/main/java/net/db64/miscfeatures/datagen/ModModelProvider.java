@@ -8,6 +8,7 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TexturedModel;
+import net.minecraft.state.property.Properties;
 
 public class ModModelProvider extends FabricModelProvider {
 	public ModModelProvider(FabricDataOutput output) {
@@ -61,6 +62,8 @@ public class ModModelProvider extends FabricModelProvider {
 
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.STEEL_WOOL);
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BURNT_STEEL_WOOL);
+
+		blockStateModelGenerator.registerCrop(ModBlocks.WARPED_WART, Properties.AGE_3, 0, 1, 1, 2);
 	}
 
 	@Override
@@ -69,5 +72,7 @@ public class ModModelProvider extends FabricModelProvider {
 		itemModelGenerator.register(ModItems.STRIPES_ARMOR_TRIM, Models.GENERATED);
 		itemModelGenerator.register(ModItems.RAINBOW_SAWDUST, Models.GENERATED);
 		itemModelGenerator.register(ModItems.ANIMAL_FEED, Models.GENERATED);
+		itemModelGenerator.register(ModItems.HORRIBLY_MISSPELLED_CHEESEBURGER, Models.GENERATED);
+		// The instant death potion uses custom models
 	}
 }

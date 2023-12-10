@@ -1,0 +1,12 @@
+{
+	"type": "miscfeatures:quartz_shredder",
+	"ingredients": [
+		{
+			"item": "minecraft:iron_ingot"
+		}
+	],
+	"output": {
+		"item": "miscfeatures:steel_wool",
+		"count": 1
+	}
+}

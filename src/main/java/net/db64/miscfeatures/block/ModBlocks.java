@@ -30,7 +30,6 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction.Axis;
 
@@ -120,18 +119,21 @@ public class ModBlocks {
 		new Block(FabricBlockSettings.copyOf(Blocks.DIRT).velocityMultiplier(0.7f).sounds(BlockSoundGroup.SHROOMLIGHT).mapColor(MapColor.BLACK)));
 
 	public static final Block SPIKE_BLOCK = registerBlock("spike_block",
-		new SpikeBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque().requiresTool()));
+		new SpikeBlockBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).nonOpaque().requiresTool()));
 
 	public static final Block ADVANCED_NOTE_BLOCK = registerBlock("advanced_note_block",
-		new AdvancedNoteBlock(FabricBlockSettings.copyOf(Blocks.NOTE_BLOCK)));
+		new AdvancedNoteBlockBlock(FabricBlockSettings.copyOf(Blocks.NOTE_BLOCK)));
 
 	public static final Block QUARTZ_SHREDDER = registerBlock("quartz_shredder",
-		new QuartzShredder(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+		new QuartzShredderBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
 
 	public static final Block STEEL_WOOL = registerBlock("steel_wool",
 		new CharrableBlock(FabricBlockSettings.copyOf(Blocks.DIRT).mapColor(MapColor.LIGHT_GRAY).sounds(BlockSoundGroup.HANGING_ROOTS).burnable(), Blocks.STONE.getDefaultState()));
 	public static final Block BURNT_STEEL_WOOL = registerBlock("burnt_steel_wool",
 		new Block(FabricBlockSettings.copyOf(Blocks.DIRT).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.HANGING_ROOTS).strength(1.5f, 6.0f)));
+
+	public static final Block WARPED_WART = registerBlock("warped_wart",
+		new WarpedWartCropBlock(FabricBlockSettings.copyOf(Blocks.NETHER_WART)), false);
 
 	private static Block registerBlock(String name, Block block, boolean obtainable) {
 		if (obtainable)
@@ -151,46 +153,46 @@ public class ModBlocks {
 	public static void registerModBlocks() {
 		MiscFeatures.LOGGER.debug("Registering blocks for " + MiscFeatures.MOD_ID);
 
-		((CustomLog)RUBBER_LOG).stripOutcomes.add(STRIPPED_RUBBER_LOG);
-		((CustomLog)RUBBER_LOG).stripOutcomes.add(DRIPPING_RUBBER_LOG);
-		((CustomLog)RUBBER_LOG).stripChances.add(5f);
-		((CustomLog)RUBBER_LOG).stripChances.add(1f);
+		((CustomLogBlock)RUBBER_LOG).stripOutcomes.add(STRIPPED_RUBBER_LOG);
+		((CustomLogBlock)RUBBER_LOG).stripOutcomes.add(DRIPPING_RUBBER_LOG);
+		((CustomLogBlock)RUBBER_LOG).stripChances.add(5f);
+		((CustomLogBlock)RUBBER_LOG).stripChances.add(1f);
 
-		((CustomLog)RUBBER_WOOD).stripOutcomes.add(STRIPPED_RUBBER_WOOD);
-		((CustomLog)RUBBER_WOOD).stripOutcomes.add(DRIPPING_RUBBER_WOOD);
-		((CustomLog)RUBBER_WOOD).stripChances.add(5f);
-		((CustomLog)RUBBER_WOOD).stripChances.add(1f);
+		((CustomLogBlock)RUBBER_WOOD).stripOutcomes.add(STRIPPED_RUBBER_WOOD);
+		((CustomLogBlock)RUBBER_WOOD).stripOutcomes.add(DRIPPING_RUBBER_WOOD);
+		((CustomLogBlock)RUBBER_WOOD).stripChances.add(5f);
+		((CustomLogBlock)RUBBER_WOOD).stripChances.add(1f);
 
-		((CustomLog)DRIPPING_RUBBER_LOG).bottleItem = ModItems.LATEX_BOTTLE;
-		((CustomLog)DRIPPING_RUBBER_LOG).bottleOutcome = ModBlocks.STRIPPED_RUBBER_LOG;
+		((CustomLogBlock)DRIPPING_RUBBER_LOG).bottleItem = ModItems.LATEX_BOTTLE;
+		((CustomLogBlock)DRIPPING_RUBBER_LOG).bottleOutcome = ModBlocks.STRIPPED_RUBBER_LOG;
 
-		((CustomLog)DRIPPING_RUBBER_WOOD).bottleItem = ModItems.LATEX_BOTTLE;
-		((CustomLog)DRIPPING_RUBBER_WOOD).bottleOutcome = ModBlocks.STRIPPED_RUBBER_WOOD;
+		((CustomLogBlock)DRIPPING_RUBBER_WOOD).bottleItem = ModItems.LATEX_BOTTLE;
+		((CustomLogBlock)DRIPPING_RUBBER_WOOD).bottleOutcome = ModBlocks.STRIPPED_RUBBER_WOOD;
 
-		((CustomLog)RAINBOW_EUCALYPTUS_LOG).stripOutcomes.add(STRIPPED_RAINBOW_EUCALYPTUS_LOG);
-		((CustomLog)RAINBOW_EUCALYPTUS_LOG).stripChances.add(1f);
+		((CustomLogBlock)RAINBOW_EUCALYPTUS_LOG).stripOutcomes.add(STRIPPED_RAINBOW_EUCALYPTUS_LOG);
+		((CustomLogBlock)RAINBOW_EUCALYPTUS_LOG).stripChances.add(1f);
 
-		((CustomLog)RAINBOW_EUCALYPTUS_WOOD).stripOutcomes.add(STRIPPED_RAINBOW_EUCALYPTUS_WOOD);
-		((CustomLog)RAINBOW_EUCALYPTUS_WOOD).stripChances.add(1f);
+		((CustomLogBlock)RAINBOW_EUCALYPTUS_WOOD).stripOutcomes.add(STRIPPED_RAINBOW_EUCALYPTUS_WOOD);
+		((CustomLogBlock)RAINBOW_EUCALYPTUS_WOOD).stripChances.add(1f);
 
 		((CharrableBlock)STEEL_WOOL).turnInto = ModBlocks.BURNT_STEEL_WOOL.getDefaultState();
 	}
 
-	private static CustomLog createLogBlock(MapColor topMapColor, MapColor sideMapColor, BlockSoundGroup soundGroup) {
-		return new CustomLog(FabricBlockSettings.create().mapColor((state) -> {
+	private static CustomLogBlock createLogBlock(MapColor topMapColor, MapColor sideMapColor, BlockSoundGroup soundGroup) {
+		return new CustomLogBlock(FabricBlockSettings.create().mapColor((state) -> {
 			return state.get(PillarBlock.AXIS) == Axis.Y ? topMapColor : sideMapColor;
 			}).instrument(Instrument.BASS).strength(2.0F).sounds(soundGroup).burnable());
 	}
 
-	private static CustomLog createLogBlock(MapColor topMapColor, MapColor sideMapColor) {
+	private static CustomLogBlock createLogBlock(MapColor topMapColor, MapColor sideMapColor) {
 		return createLogBlock(topMapColor, sideMapColor, BlockSoundGroup.WOOD);
 	}
 
-	private static CustomLog createLogBlock(MapColor mapColor) {
+	private static CustomLogBlock createLogBlock(MapColor mapColor) {
 		return createLogBlock(mapColor, BlockSoundGroup.WOOD);
 	}
 	
-	private static CustomLog createLogBlock(MapColor mapColor, BlockSoundGroup soundGroup) {
+	private static CustomLogBlock createLogBlock(MapColor mapColor, BlockSoundGroup soundGroup) {
 		return createLogBlock(mapColor, mapColor, soundGroup);
 	}
 

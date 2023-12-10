@@ -1,0 +1,12 @@
+{
+	"type": "miscfeatures:quartz_shredder",
+	"ingredients": [
+		{
+			"item": "minecraft:nether_wart_block"
+		}
+	],
+	"output": {
+		"item": "minecraft:nether_wart",
+		"count": 9
+	}
+}

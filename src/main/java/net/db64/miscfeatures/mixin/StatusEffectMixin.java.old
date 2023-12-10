@@ -1,0 +1,13 @@
+package net.db64.miscfeatures.mixin;
+
+import net.minecraft.entity.effect.StatusEffect;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Invoker;
+
+@Mixin(StatusEffect.class)
+public class StatusEffectMixin {
+	@Invoker("<init>")
+	public StatusEffect create() {
+		throw new AssertionError();
+	}
+}

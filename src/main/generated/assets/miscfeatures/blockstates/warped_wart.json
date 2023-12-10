@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "miscfeatures:block/warped_wart_stage0"
+    },
+    "age=1": {
+      "model": "miscfeatures:block/warped_wart_stage1"
+    },
+    "age=2": {
+      "model": "miscfeatures:block/warped_wart_stage1"
+    },
+    "age=3": {
+      "model": "miscfeatures:block/warped_wart_stage2"
+    }
+  }
+}

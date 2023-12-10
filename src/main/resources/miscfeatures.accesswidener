@@ -5,3 +5,5 @@ mutable field net/minecraft/entity/passive/PigEntity BREEDING_INGREDIENT Lnet/mi
 
 accessible field net/minecraft/entity/passive/ChickenEntity BREEDING_INGREDIENT Lnet/minecraft/recipe/Ingredient;
 mutable field net/minecraft/entity/passive/ChickenEntity BREEDING_INGREDIENT Lnet/minecraft/recipe/Ingredient;
+
+#accessible field net/minecraft/client/MinecraftClient itemColors Lnet/minecraft/client/color/item/ItemColors;

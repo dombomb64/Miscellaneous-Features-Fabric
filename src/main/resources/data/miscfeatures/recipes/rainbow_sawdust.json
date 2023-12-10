@@ -1,0 +1,17 @@
+{
+	"type": "miscfeatures:quartz_shredder",
+	"ingredients": [
+		[
+			{
+				"item": "miscfeatures:rainbow_eucalyptus_log"
+			},
+			{
+				"item": "miscfeatures:rainbow_eucalyptus_wood"
+			}
+		]
+	],
+	"output": {
+		"item": "miscfeatures:rainbow_sawdust",
+		"count": 1
+	}
+}

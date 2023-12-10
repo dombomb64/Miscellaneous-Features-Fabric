@@ -97,6 +97,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 		// Burnt Steel Wool
 		offerSmelting(exporter, List.of(ModBlocks.STEEL_WOOL), RecipeCategory.FOOD, ModBlocks.BURNT_STEEL_WOOL, 0.2f, 200, "char_block");
+
+		// Warped Wart Block
+		offerCompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.WARPED_WART_BLOCK, ModItems.WARPED_WART);
 	}
 
 	private static class ModRecipeTemplates {

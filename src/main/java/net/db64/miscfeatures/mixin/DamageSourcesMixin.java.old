@@ -1,0 +1,40 @@
+package net.db64.miscfeatures.mixin;
+
+import net.db64.miscfeatures.entity.ModDamageTypes;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageSources;
+import net.minecraft.entity.damage.DamageTypes;
+import net.minecraft.registry.DynamicRegistryManager;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+@Mixin(DamageSources.class)
+public class DamageSourcesMixin {
+	@Unique
+	private DamageSource spikeBlock;
+	@Unique
+	private DamageSource achillesHeel;
+	
+	@Inject(
+		method = "<init>",
+		at = @At(
+			value = "RETURN"
+		)
+	)
+	private void addModDamageSources(DynamicRegistryManager registryManager, CallbackInfo ci) {
+		var toHiss = ((DamageSources)(Object)this);
+		this.spikeBlock = toHiss.create(ModDamageTypes.SPIKE_BLOCK);
+		this.achillesHeel = toHiss.create(ModDamageTypes.ACHILLES_HEEL);
+	}
+	
+	public DamageSource spikeBlock() {
+		return this.spikeBlock;
+	}
+
+	public DamageSource achillesHeel() {
+		return this.achillesHeel;
+	}
+}

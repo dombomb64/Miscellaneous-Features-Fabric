@@ -2,6 +2,7 @@
 	"itemgroup.miscfeatures": "Miscellaneous Features",
 	
 	"death.attack.spike_block": "%1$s didn't dodge the spike",
+	"death.attack.achilles_heel": "%1$s found their one weakness",
 
 	"subtitles.block.spike_block.extend": "Spike block extends",
 	"subtitles.block.spike_block.retract": "Spike block retracts",
@@ -21,6 +22,43 @@
 	"item.miscfeatures.rainbow_sawdust.tooltip": "A perfect on-the-go snack.",
 
 	"item.miscfeatures.animal_feed": "Animal Feed",
+
+	"item.miscfeatures.horribly_misspelled_cheeseburger": "chjaseweesf; nghh;eburegr",
+	"item.miscfeatures.horribly_misspelled_cheeseburger.tooltip": "◕ᨓ◕",
+
+	"item.miscfeatures.warped_wart": "Warped Wart",
+
+	"item.minecraft.potion.effect.immortality": "Potion of Indestructibility",
+	"item.minecraft.potion.effect.overkill": "Potion of Devastation",
+	"item.minecraft.potion.effect.adamance": "Potion of Stalwartness",
+	"item.minecraft.potion.effect.mercilessness": "Potion of Relentlessness",
+	"item.minecraft.potion.effect.instant_death_good": "Potion of Instant Death",
+	"item.minecraft.potion.effect.instant_death_bad": "Potion of Instant Death",
+	"item.minecraft.potion.effect.serenity": "Potion of Bliss",
+
+	"item.minecraft.splash_potion.effect.immortality": "Splash Potion of Indestructibility",
+	"item.minecraft.splash_potion.effect.overkill": "Splash Potion of Devastation",
+	"item.minecraft.splash_potion.effect.adamance": "Splash Potion of Stalwartness",
+	"item.minecraft.splash_potion.effect.mercilessness": "Splash Potion of Relentlessness",
+	"item.minecraft.splash_potion.effect.instant_death_good": "Splash Potion of Instant Death",
+	"item.minecraft.splash_potion.effect.instant_death_bad": "Splash Potion of Instant Death",
+	"item.minecraft.splash_potion.effect.serenity": "Splash Potion of Bliss",
+
+	"item.minecraft.lingering_potion.effect.immortality": "Lingering Potion of Indestructibility",
+	"item.minecraft.lingering_potion.effect.overkill": "Lingering Potion of Devastation",
+	"item.minecraft.lingering_potion.effect.adamance": "Lingering Potion of Stalwartness",
+	"item.minecraft.lingering_potion.effect.mercilessness": "Lingering Potion of Relentlessness",
+	"item.minecraft.lingering_potion.effect.instant_death_good": "Lingering Potion of Instant Death",
+	"item.minecraft.lingering_potion.effect.instant_death_bad": "Lingering Potion of Instant Death",
+	"item.minecraft.lingering_potion.effect.serenity": "Lingering Potion of Bliss",
+
+	"item.minecraft.tipped_arrow.effect.immortality": "Arrow of Indestructibility",
+	"item.minecraft.tipped_arrow.effect.overkill": "Arrow of Devastation",
+	"item.minecraft.tipped_arrow.effect.adamance": "Arrow of Stalwartness",
+	"item.minecraft.tipped_arrow.effect.mercilessness": "Arrow of Relentlessness",
+	"item.minecraft.tipped_arrow.effect.instant_death_good": "Arrow of Instant Death",
+	"item.minecraft.tipped_arrow.effect.instant_death_bad": "Arrow of Instant Death",
+	"item.minecraft.tipped_arrow.effect.serenity": "Arrow of Bliss",
 
 	"block.miscfeatures.rubber_log": "Rubber Log",
 	"block.miscfeatures.rubber_wood": "Rubber Wood",
@@ -69,6 +107,18 @@
 
 	"block.miscfeatures.steel_wool": "Steel Wool",
 	"block.miscfeatures.burnt_steel_wool": "Burnt Steel Wool",
+
+	"block.miscfeatures.warped_wart": "Warped Wart",
+
+	"effect.miscfeatures.immortality": "Immortality",
+	"effect.miscfeatures.overkill": "Overkill",
+	"effect.miscfeatures.adamance": "Adamance",
+	"effect.miscfeatures.mercilessness": "Mercilessness",
+	"effect.miscfeatures.instant_death_good": "Instant Death",
+	"effect.miscfeatures.instant_death_good.creative": "Instant Death (For Next Target)",
+	"effect.miscfeatures.instant_death_bad": "Instant Death",
+	"effect.miscfeatures.instant_death_bad.creative": "Instant Death (For User)",
+	"effect.miscfeatures.serenity": "Serenity",
 
 	"trim_pattern.miscfeatures.stripes": "Stripes Armor Trim"
 }

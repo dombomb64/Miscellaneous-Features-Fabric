@@ -1,0 +1,25 @@
+package net.db64.miscfeatures.util;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.loot.context.LootContext;
+import net.minecraft.loot.function.ConditionalLootFunction;
+import net.minecraft.loot.function.LootFunctionType;
+
+import java.util.List;
+
+public class InstantDeathPotionLootFunction extends ConditionalLootFunction {
+	protected InstantDeathPotionLootFunction(List<LootCondition> conditions) {
+		super(conditions);
+	}
+
+	@Override
+	protected ItemStack process(ItemStack stack, LootContext context) {
+		return null;
+	}
+
+	@Override
+	public LootFunctionType getType() {
+		return null;
+	}
+}
