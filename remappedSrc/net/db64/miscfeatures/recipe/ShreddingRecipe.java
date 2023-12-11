@@ -11,7 +11,7 @@ import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.dynamic.Codecs;
 import net.minecraft.world.World;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShreddingRecipe implements Recipe<SimpleInventory> {

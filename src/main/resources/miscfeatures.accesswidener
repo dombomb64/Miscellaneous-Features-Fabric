@@ -7,3 +7,11 @@ accessible field net/minecraft/entity/passive/ChickenEntity BREEDING_INGREDIENT 
 mutable field net/minecraft/entity/passive/ChickenEntity BREEDING_INGREDIENT Lnet/minecraft/recipe/Ingredient;
 
 #accessible field net/minecraft/client/MinecraftClient itemColors Lnet/minecraft/client/color/item/ItemColors;
+
+#extendable class net/minecraft/block/SaplingGenerator
+
+accessible method net/minecraft/block/DoorBlock <init> (Lnet/minecraft/block/BlockSetType;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/TrapdoorBlock <init> (Lnet/minecraft/block/BlockSetType;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/PressurePlateBlock <init> (Lnet/minecraft/block/BlockSetType;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/ButtonBlock <init> (Lnet/minecraft/block/BlockSetType;ILnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/SaplingBlock <init> (Lnet/minecraft/block/SaplingGenerator;Lnet/minecraft/block/AbstractBlock$Settings;)V
