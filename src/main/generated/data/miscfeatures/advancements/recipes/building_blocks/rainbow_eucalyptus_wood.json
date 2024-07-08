@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:rainbow_eucalyptus_wood"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -2,12 +2,17 @@ package net.db64.miscfeatures;
 
 import net.db64.miscfeatures.block.ModBlocks;
 import net.db64.miscfeatures.effect.ModEffects;
+import net.db64.miscfeatures.entity.ModEntities;
+import net.db64.miscfeatures.entity.client.FallingSporesRenderer;
+import net.db64.miscfeatures.entity.client.ModModelLayers;
 import net.db64.miscfeatures.item.ModItems;
 import net.db64.miscfeatures.item.custom.InstantDeathPotionItem;
 import net.db64.miscfeatures.screen.ModScreenHandlers;
 import net.db64.miscfeatures.screen.QuartzShredderScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.impl.client.rendering.ColorProviderRegistryImpl;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
@@ -22,13 +27,25 @@ public class MiscFeaturesClient implements ClientModInitializer {
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RAINBOW_EUCALYPTUS_DOOR, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RAINBOW_EUCALYPTUS_TRAPDOOR, RenderLayer.getCutout());
+
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RUBBER_SAPLING, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RAINBOW_EUCALYPTUS_SAPLING, RenderLayer.getCutout());
+
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPIKE_BLOCK, RenderLayer.getCutout());
+
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WARPED_WART, RenderLayer.getCutout());
+
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SHROOMLIGHT_SPORES, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CRIMSON_SPORES, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WARPED_SPORES, RenderLayer.getCutout());
+
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ICICLE, RenderLayer.getCutout());
 
 		ColorProviderRegistryImpl.ITEM.register((stack, tintIndex) -> tintIndex > 0 ? -1 : InstantDeathPotionItem.getColor(stack), ModItems.INSTANT_DEATH_POTION);
 
 		HandledScreens.register(ModScreenHandlers.QUARTZ_SHREDDER, QuartzShredderScreen::new);
+
+		EntityRendererRegistry.register(ModEntities.FALLING_SPORES, FallingSporesRenderer::new);
+		//EntityModelLayerRegistry.registerModelLayer(ModModelLayers.FALLING_SPORES, );
 	}
 }

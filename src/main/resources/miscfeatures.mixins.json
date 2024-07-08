@@ -10,6 +10,7 @@
 		"FireBlockMixin",
 		"GoatBrainMixin",
 		"GoatEntityMixin",
+		"IceBlockMixin",
 		"LivingEntityMixin",
 		"MobEntityMixin",
 		"PistonHandlerMixin",

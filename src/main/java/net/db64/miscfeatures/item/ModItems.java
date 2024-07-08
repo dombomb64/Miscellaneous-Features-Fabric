@@ -29,6 +29,12 @@ public class ModItems {
 		new AliasedBlockItem(ModBlocks.WARPED_WART, new FabricItemSettings()));
 	public static final Item INSTANT_DEATH_POTION = registerItem("instant_death_potion",
 		new InstantDeathPotionItem(new FabricItemSettings().maxCount(1)));
+	public static final Item SHROOMLIGHT_SPORES = registerItem("shroomlight_spores",
+		new AliasedBlockItem(ModBlocks.SHROOMLIGHT_SPORES, new FabricItemSettings()));
+	public static final Item CRIMSON_SPORES = registerItem("crimson_spores",
+		new AliasedBlockItem(ModBlocks.CRIMSON_SPORES, new FabricItemSettings()));
+	public static final Item WARPED_SPORES = registerItem("warped_spores",
+		new AliasedBlockItem(ModBlocks.WARPED_SPORES, new FabricItemSettings()));
 
 	private static Item registerItem(String name, Item item) {
 		MiscFeatures.LOGGER.debug("Registering item " + MiscFeatures.MOD_ID + ":" + name);
@@ -46,12 +52,18 @@ public class ModItems {
 		MiscFeatures.LOGGER.debug("Registering vanilla item groups for Miscellaneous Features (" + MiscFeatures.MOD_ID + ")");
 
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(VanillaItemGroups::addItemsToBuildingBlocksItemGroup);
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(VanillaItemGroups::addItemsToColoredBlocksItemGroup);
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(VanillaItemGroups::addItemsToNaturalBlocksItemGroup);
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(VanillaItemGroups::addItemsToFunctionalBlocksItemGroup);
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(VanillaItemGroups::addItemsToRedstoneItemGroup);
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(VanillaItemGroups::addItemsToFoodAndDrinkItemGroup);
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(VanillaItemGroups::addItemsToRedstoneBlocksItemGroup);
+
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(VanillaItemGroups::addItemsToToolsAndUtilitiesItemGroup);
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(VanillaItemGroups::addItemsToCombatItemGroup);
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(VanillaItemGroups::addItemsToFoodAndDrinksItemGroup);
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(VanillaItemGroups::addItemsToIngredientsItemGroup);
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(VanillaItemGroups::addItemsToOperatorItemsItemGroup);
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(VanillaItemGroups::addItemsToSpawnEggsItemGroup);
+
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(VanillaItemGroups::addItemsToOperatorUtilitiesItemGroup);
 	}
 
 	public static ItemStack getInstantDeathPotion(boolean good) {
@@ -103,6 +115,9 @@ public class ModItems {
 			entries.add(ModBlocks.BURNT_STEEL_WOOL);
 		}
 
+		public static void addItemsToColoredBlocksItemGroup(FabricItemGroupEntries entries) {
+		}
+
 		public static void addItemsToNaturalBlocksItemGroup(FabricItemGroupEntries entries) {
 			entries.add(ModBlocks.RUBBER_LOG);
 			entries.add(ModBlocks.RUBBER_LEAVES);
@@ -111,32 +126,53 @@ public class ModItems {
 			entries.add(ModBlocks.RAINBOW_EUCALYPTUS_LOG);
 			entries.add(ModBlocks.RAINBOW_EUCALYPTUS_LEAVES);
 			entries.add(ModBlocks.RAINBOW_EUCALYPTUS_SAPLING);
+
+			entries.add(ModBlocks.ICICLE);
 		}
 
 		public static void addItemsToFunctionalBlocksItemGroup(FabricItemGroupEntries entries) {
 			entries.add(ModBlocks.QUARTZ_SHREDDER);
+
+			entries.add(ModItems.SHROOMLIGHT_SPORES);
+			entries.add(ModItems.CRIMSON_SPORES);
+			entries.add(ModItems.WARPED_SPORES);
+
+			entries.add(ModBlocks.ICICLE);
 		}
 
-		public static void addItemsToRedstoneItemGroup(FabricItemGroupEntries entries) {
+		public static void addItemsToRedstoneBlocksItemGroup(FabricItemGroupEntries entries) {
 			entries.add(ModBlocks.SPIKE_BLOCK);
 			entries.add(ModBlocks.ADVANCED_NOTE_BLOCK);
 		}
 
-		public static void addItemsToFoodAndDrinkItemGroup(FabricItemGroupEntries entries) {
+		public static void addItemsToToolsAndUtilitiesItemGroup(FabricItemGroupEntries entries) {
+		}
+
+		public static void addItemsToCombatItemGroup(FabricItemGroupEntries entries) {
+		}
+
+		public static void addItemsToFoodAndDrinksItemGroup(FabricItemGroupEntries entries) {
 			entries.add(ModItems.RAINBOW_SAWDUST);
 			// The cheeseburger is so rare and overpowered that it's not even in the normal creative inventory
+
 			entries.add(ModItems.getInstantDeathPotion(true));
 			entries.add(ModItems.getInstantDeathPotion(false));
 		}
 
 		public static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
 			entries.add(ModItems.LATEX_BOTTLE);
+
 			entries.add(ModItems.STRIPES_ARMOR_TRIM);
+
 			entries.add(ModItems.ANIMAL_FEED);
+
 			entries.add(ModItems.WARPED_WART);
 		}
 
-		public static void addItemsToOperatorItemsItemGroup(FabricItemGroupEntries entries) {
+		public static void addItemsToSpawnEggsItemGroup(FabricItemGroupEntries entries) {
+		}
+
+		public static void addItemsToOperatorUtilitiesItemGroup(FabricItemGroupEntries entries) {
 			entries.add(ModItems.HORRIBLY_MISSPELLED_CHEESEBURGER);
 		}
 	}

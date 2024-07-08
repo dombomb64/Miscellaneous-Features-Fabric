@@ -14,6 +14,7 @@ import net.db64.miscfeatures.util.ModLootTableModifiers;
 import net.db64.miscfeatures.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.PigEntity;

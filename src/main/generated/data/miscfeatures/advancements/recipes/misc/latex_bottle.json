@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:latex_bottle"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

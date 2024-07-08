@@ -75,5 +75,9 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
 		addDrop(ModBlocks.BURNT_STEEL_WOOL);
 
 		addDrop(ModBlocks.WARPED_WART, (Block block) -> LootTable.builder().pool(this.applyExplosionDecay(block, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0f)).with((((LeafEntry.Builder<?>) ItemEntry.builder(ModItems.WARPED_WART).apply((SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(WarpedWartCropBlock.AGE, 3)))))).apply((ApplyBonusLootFunction.uniformBonusCount(Enchantments.FORTUNE).conditionally(BlockStatePropertyLootCondition.builder(block).properties(StatePredicate.Builder.create().exactMatch(WarpedWartCropBlock.AGE, 3))))))))));
+
+		addDrop(ModBlocks.SHROOMLIGHT_SPORES, drops(ModItems.SHROOMLIGHT_SPORES));
+		addDrop(ModBlocks.CRIMSON_SPORES, drops(ModItems.CRIMSON_SPORES));
+		addDrop(ModBlocks.WARPED_SPORES, drops(ModItems.WARPED_SPORES));
 	}
 }

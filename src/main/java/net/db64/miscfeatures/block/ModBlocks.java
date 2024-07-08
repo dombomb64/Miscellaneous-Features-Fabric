@@ -127,7 +127,20 @@ public class ModBlocks {
 		new Block(FabricBlockSettings.copyOf(Blocks.DIRT).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.HANGING_ROOTS).strength(1.5f, 6.0f)));
 
 	public static final Block WARPED_WART = registerBlock("warped_wart",
-		new WarpedWartCropBlock(FabricBlockSettings.copyOf(Blocks.NETHER_WART)), false);
+		new WarpedWartCropBlock(FabricBlockSettings.copyOf(Blocks.NETHER_WART).mapColor(MapColor.BRIGHT_TEAL)), false);
+
+	public static final Block SHROOMLIGHT_SPORES = registerBlock("shroomlight_spores",
+		new NetherSporesBlock(FabricBlockSettings.copyOf(Blocks.SHROOMLIGHT).luminance(NetherSporesBlock::getShroomlightLuminance).dynamicBounds().nonOpaque(),
+			40, 60), false);
+	public static final Block CRIMSON_SPORES = registerBlock("crimson_spores",
+		new NetherSporesBlock(FabricBlockSettings.copyOf(Blocks.NETHER_WART_BLOCK).dynamicBounds().nonOpaque(),
+			4, 60), false);
+	public static final Block WARPED_SPORES = registerBlock("warped_spores",
+		new NetherSporesBlock(FabricBlockSettings.copyOf(Blocks.WARPED_WART_BLOCK).dynamicBounds().nonOpaque(),
+			80, 80), false);
+
+	public static final Block ICICLE = registerBlock("icicle",
+		new IcicleBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.GLASS).dynamicBounds().nonOpaque()));
 
 	private static Block registerBlock(String name, Block block, boolean obtainable) {
 		if (obtainable)

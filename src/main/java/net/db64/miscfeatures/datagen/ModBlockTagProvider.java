@@ -46,7 +46,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 			.add(ModBlocks.RUBBERWOOD_SLAB)
 			.add(ModBlocks.RAINBOW_EUCALYPTUS_SLAB);
 
-		getOrCreateTagBuilder(BlockTags.FENCES)
+		getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
 			.add(ModBlocks.RUBBERWOOD_FENCE)
 			.add(ModBlocks.RAINBOW_EUCALYPTUS_FENCE);
 		getOrCreateTagBuilder(BlockTags.FENCE_GATES)
@@ -68,9 +68,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 			.add(ModBlocks.RAINBOW_EUCALYPTUS_BUTTON);
 
 		getOrCreateTagBuilder(BlockTags.LEAVES)
-			.add(ModBlocks.RUBBER_LEAVES);
+			.add(ModBlocks.RUBBER_LEAVES)
+			.add(ModBlocks.RAINBOW_EUCALYPTUS_LEAVES);
 		getOrCreateTagBuilder(BlockTags.SAPLINGS)
-			.add(ModBlocks.RUBBER_SAPLING);
+			.add(ModBlocks.RUBBER_SAPLING)
+			.add(ModBlocks.RAINBOW_EUCALYPTUS_SAPLING);
 
 		//getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
 			//.add(ModBlocks.RUBBERWOOD_PLANKS);

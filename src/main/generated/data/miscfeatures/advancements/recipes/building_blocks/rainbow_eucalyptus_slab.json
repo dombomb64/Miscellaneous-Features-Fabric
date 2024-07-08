@@ -30,6 +30,5 @@
     "recipes": [
       "miscfeatures:rainbow_eucalyptus_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -28,14 +28,13 @@ public class SpikeBlockBlock extends Block {
 
 	public SpikeBlockBlock(Settings settings) {
 		super(settings);
-		this.setDefaultState((BlockState)this.getDefaultState().with(EXTENDED, false).with(FORCED, false));
+		this.setDefaultState(this.getDefaultState().with(EXTENDED, false).with(FORCED, false));
 	}
 
 	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 		builder.add(new BooleanProperty[]{EXTENDED});
 		builder.add(new BooleanProperty[]{FORCED});
 	}
-
 	
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		ItemStack itemStack = player.getStackInHand(hand);

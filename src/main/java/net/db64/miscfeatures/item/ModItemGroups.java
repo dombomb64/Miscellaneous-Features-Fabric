@@ -81,6 +81,12 @@ public class ModItemGroups {
 
 			entries.add(ModItems.WARPED_WART);
 
+			entries.add(ModItems.SHROOMLIGHT_SPORES);
+			entries.add(ModItems.CRIMSON_SPORES);
+			entries.add(ModItems.WARPED_SPORES);
+
+			entries.add(ModBlocks.ICICLE);
+
 			addPotions(entries);
 		}).build());
 

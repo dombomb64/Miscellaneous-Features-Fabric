@@ -1,0 +1,7 @@
+{
+	"parent": "miscfeatures:block/nether_spores",
+	"textures": {
+		"side": "miscfeatures:block/nether_spores_coated_side",
+		"top": "miscfeatures:block/warped_spores_unstable_coated_top"
+	}
+}

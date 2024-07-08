@@ -3,6 +3,7 @@
 	
 	"death.attack.spike_block": "%1$s didn't dodge the spike",
 	"death.attack.achilles_heel": "%1$s found their one weakness",
+	"death.attack.falling_icicle": "%1$s got their eye sickled",
 
 	"subtitles.block.spike_block.extend": "Spike block extends",
 	"subtitles.block.spike_block.retract": "Spike block retracts",
@@ -27,6 +28,10 @@
 	"item.miscfeatures.horribly_misspelled_cheeseburger.tooltip": "◕ᨓ◕",
 
 	"item.miscfeatures.warped_wart": "Warped Wart",
+
+	"item.miscfeatures.shroomlight_spores": "Shroomlight Spores",
+	"item.miscfeatures.crimson_spores": "Crimson Spores",
+	"item.miscfeatures.warped_spores": "Warped Spores",
 
 	"item.minecraft.potion.effect.immortality": "Potion of Indestructibility",
 	"item.minecraft.potion.effect.overkill": "Potion of Devastation",
@@ -110,6 +115,12 @@
 
 	"block.miscfeatures.warped_wart": "Warped Wart",
 
+	"block.miscfeatures.shroomlight_spores": "Shroomlight Spores",
+	"block.miscfeatures.crimson_spores": "Crimson Spores",
+	"block.miscfeatures.warped_spores": "Warped Spores",
+
+	"block.miscfeatures.icicle": "Icicle",
+
 	"effect.miscfeatures.immortality": "Immortality",
 	"effect.miscfeatures.overkill": "Overkill",
 	"effect.miscfeatures.adamance": "Adamance",
@@ -119,6 +130,9 @@
 	"effect.miscfeatures.instant_death_bad": "Instant Death",
 	"effect.miscfeatures.instant_death_bad.creative": "Instant Death (For User)",
 	"effect.miscfeatures.serenity": "Serenity",
+
+	"entity.miscfeatures.falling_spores": "Falling Spores",
+	"entity.miscfeatures.falling_spores_type": "Falling %s",
 
 	"trim_pattern.miscfeatures.stripes": "Stripes Armor Trim"
 }

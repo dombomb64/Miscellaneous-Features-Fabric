@@ -1,0 +1,22 @@
+{
+	"variants": {
+		"coated=false,state=default": {
+			"model": "miscfeatures:block/warped_spores"
+		},
+		"coated=true,state=default": {
+			"model": "miscfeatures:block/warped_spores_coated"
+		},
+		"coated=false,state=unstable": {
+			"model": "miscfeatures:block/warped_spores_unstable"
+		},
+		"coated=true,state=unstable": {
+			"model": "miscfeatures:block/warped_spores_unstable_coated"
+		},
+		"coated=false,state=regrowing": {
+			"model": "miscfeatures:block/warped_spores_regrowing"
+		},
+		"coated=true,state=regrowing": {
+			"model": "miscfeatures:block/warped_spores_regrowing_coated"
+		}
+	}
+}

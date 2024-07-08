@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:burnt_steel_wool_from_smelting_steel_wool"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -15,3 +15,5 @@ accessible method net/minecraft/block/TrapdoorBlock <init> (Lnet/minecraft/block
 accessible method net/minecraft/block/PressurePlateBlock <init> (Lnet/minecraft/block/BlockSetType;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/ButtonBlock <init> (Lnet/minecraft/block/BlockSetType;ILnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/SaplingBlock <init> (Lnet/minecraft/block/SaplingGenerator;Lnet/minecraft/block/AbstractBlock$Settings;)V
+
+accessible field net/minecraft/entity/FallingBlockEntity block Lnet/minecraft/block/BlockState;

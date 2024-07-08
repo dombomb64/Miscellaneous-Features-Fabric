@@ -1,0 +1,12 @@
+{
+	"type": "miscfeatures:quartz_shredder",
+	"ingredients": [
+		{
+			"item": "minecraft:shroomlight"
+		}
+	],
+	"output": {
+		"item": "miscfeatures:shroomlight_spores",
+		"count": 6
+	}
+}

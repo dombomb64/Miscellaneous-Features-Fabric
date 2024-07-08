@@ -4,11 +4,11 @@ import net.db64.miscfeatures.block.ModBlocks;
 import net.db64.miscfeatures.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.data.client.TexturedModel;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.enums.Thickness;
+import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.Direction;
 
 public class ModModelProvider extends FabricModelProvider {
 	public ModModelProvider(FabricDataOutput output) {
@@ -64,6 +64,10 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BURNT_STEEL_WOOL);
 
 		blockStateModelGenerator.registerCrop(ModBlocks.WARPED_WART, Properties.AGE_3, 0, 1, 1, 2);
+
+		// The nether spores use custom models
+
+		registerIcicle(blockStateModelGenerator);
 	}
 
 	@Override
@@ -74,5 +78,40 @@ public class ModModelProvider extends FabricModelProvider {
 		itemModelGenerator.register(ModItems.ANIMAL_FEED, Models.GENERATED);
 		itemModelGenerator.register(ModItems.HORRIBLY_MISSPELLED_CHEESEBURGER, Models.GENERATED);
 		// The instant death potion uses custom models
+		itemModelGenerator.register(ModItems.SHROOMLIGHT_SPORES, Models.GENERATED);
+		itemModelGenerator.register(ModItems.CRIMSON_SPORES, Models.GENERATED);
+		itemModelGenerator.register(ModItems.WARPED_SPORES, Models.GENERATED);
+		itemModelGenerator.register(ModBlocks.ICICLE.asItem(), Models.GENERATED);
+	}
+
+	private void registerIcicle(BlockStateModelGenerator blockStateModelGenerator) {
+		blockStateModelGenerator.excludeFromSimpleItemModelGeneration(ModBlocks.ICICLE);
+		BlockStateVariantMap.DoubleProperty<Direction, Thickness> doubleProperty = BlockStateVariantMap.create(Properties.VERTICAL_DIRECTION, Properties.THICKNESS);
+		Thickness[] var2 = Thickness.values();
+		int var3 = var2.length;
+
+		int var4;
+		Thickness thickness;
+		for(var4 = 0; var4 < var3; ++var4) {
+			thickness = var2[var4];
+			doubleProperty.register(Direction.UP, thickness, getIcicleVariant(Direction.UP, thickness, blockStateModelGenerator));
+		}
+
+		var2 = Thickness.values();
+		var3 = var2.length;
+
+		for(var4 = 0; var4 < var3; ++var4) {
+			thickness = var2[var4];
+			doubleProperty.register(Direction.DOWN, thickness, getIcicleVariant(Direction.DOWN, thickness, blockStateModelGenerator));
+		}
+
+		blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.ICICLE).coordinate(doubleProperty));
+	}
+
+	public final BlockStateVariant getIcicleVariant(Direction direction, Thickness thickness, BlockStateModelGenerator blockStateModelGenerator) {
+		String var10000 = direction.asString();
+		String string = "_" + var10000 + "_" + thickness.asString();
+		TextureMap textureMap = TextureMap.cross(TextureMap.getSubId(ModBlocks.ICICLE, string));
+		return BlockStateVariant.create().put(VariantSettings.MODEL, Models.POINTED_DRIPSTONE.upload(ModBlocks.ICICLE, string, textureMap, blockStateModelGenerator.modelCollector));
 	}
 }

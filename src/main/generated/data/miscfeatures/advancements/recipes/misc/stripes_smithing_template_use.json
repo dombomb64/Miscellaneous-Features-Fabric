@@ -30,6 +30,5 @@
     "recipes": [
       "miscfeatures:stripes_smithing_template_use"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

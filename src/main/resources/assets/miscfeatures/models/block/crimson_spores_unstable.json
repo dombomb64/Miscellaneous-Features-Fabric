@@ -1,0 +1,7 @@
+{
+	"parent": "miscfeatures:block/nether_spores",
+	"textures": {
+		"side": "miscfeatures:block/crimson_spores_side",
+		"top": "miscfeatures:block/crimson_spores_unstable_top"
+	}
+}

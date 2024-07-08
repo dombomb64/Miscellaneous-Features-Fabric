@@ -30,6 +30,5 @@
     "recipes": [
       "minecraft:rainbow_eucalyptus_door"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

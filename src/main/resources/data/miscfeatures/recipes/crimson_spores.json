@@ -1,0 +1,12 @@
+{
+	"type": "miscfeatures:quartz_shredder",
+	"ingredients": [
+		{
+			"item": "minecraft:nether_wart"
+		}
+	],
+	"output": {
+		"item": "miscfeatures:crimson_spores",
+		"count": 1
+	}
+}

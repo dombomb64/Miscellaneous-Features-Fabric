@@ -30,6 +30,5 @@
     "recipes": [
       "miscfeatures:rainbow_eucalyptus_pressure_plate"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

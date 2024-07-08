@@ -1,0 +1,12 @@
+{
+	"type": "miscfeatures:quartz_shredder",
+	"ingredients": [
+		{
+			"item": "miscfeatures:warped_wart"
+		}
+	],
+	"output": {
+		"item": "miscfeatures:warped_spores",
+		"count": 1
+	}
+}

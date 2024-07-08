@@ -30,6 +30,5 @@
     "recipes": [
       "miscfeatures:stripes_armor_trim"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

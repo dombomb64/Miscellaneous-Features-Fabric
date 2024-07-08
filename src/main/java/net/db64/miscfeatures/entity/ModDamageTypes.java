@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 public class ModDamageTypes implements DamageTypes {
 	public static final RegistryKey<DamageType> SPIKE_BLOCK = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, new Identifier(MiscFeatures.MOD_ID, "spike_block"));
 	public static final RegistryKey<DamageType> ACHILLES_HEEL = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, new Identifier(MiscFeatures.MOD_ID, "achilles_heel"));
+	public static final RegistryKey<DamageType> FALLING_ICICLE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, new Identifier(MiscFeatures.MOD_ID, "falling_icicle"));
 
 	public static DamageSource of(World world, RegistryKey<DamageType> key) {
 		return new DamageSource(world.getRegistryManager().get(RegistryKeys.DAMAGE_TYPE).entryOf(key));

@@ -1,0 +1,7 @@
+{
+	"parent": "miscfeatures:block/nether_spores",
+	"textures": {
+		"side": "miscfeatures:block/shroomlight_spores_regrowing_coated_side",
+		"top": "miscfeatures:block/shroomlight_spores_regrowing_coated_top"
+	}
+}
